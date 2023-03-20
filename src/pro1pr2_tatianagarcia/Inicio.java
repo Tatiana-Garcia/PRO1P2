@@ -355,6 +355,12 @@ public class Inicio extends javax.swing.JFrame {
         jb_resultados1 = new javax.swing.JButton();
         jb_notasfinales1 = new javax.swing.JButton();
         jLabel38 = new javax.swing.JLabel();
+        jPanel11 = new javax.swing.JPanel();
+        jb_ingresarm = new javax.swing.JButton();
+        jb_salirm = new javax.swing.JButton();
+        jb_cerrarm = new javax.swing.JButton();
+        jPanel17 = new javax.swing.JPanel();
+        jb_tareasm = new javax.swing.JButton();
         jl_regresar12 = new javax.swing.JLabel();
         header8 = new javax.swing.JPanel();
         exbt_registro7 = new javax.swing.JPanel();
@@ -417,23 +423,6 @@ public class Inicio extends javax.swing.JFrame {
         notas = new javax.swing.JPanel();
         bg_vof = new javax.swing.ButtonGroup();
         bg_multiple = new javax.swing.ButtonGroup();
-        jf_usermaestro = new javax.swing.JFrame();
-        jPanel7 = new javax.swing.JPanel();
-        header28 = new javax.swing.JPanel();
-        exbt_registro27 = new javax.swing.JPanel();
-        x28 = new javax.swing.JLabel();
-        jl_unitec10 = new javax.swing.JLabel();
-        jLabel37 = new javax.swing.JLabel();
-        jpb_login1 = new javax.swing.JPanel();
-        tx_login1 = new javax.swing.JLabel();
-        jL_loginmaestro = new javax.swing.JLabel();
-        jpb_examen = new javax.swing.JPanel();
-        tx_logout1 = new javax.swing.JLabel();
-        jL_examen = new javax.swing.JLabel();
-        jpb_close1 = new javax.swing.JPanel();
-        tx_close1 = new javax.swing.JLabel();
-        jL_tareas = new javax.swing.JLabel();
-        jl_regresar13 = new javax.swing.JLabel();
         jd_modq = new javax.swing.JDialog();
         jPanel6 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
@@ -474,15 +463,16 @@ public class Inicio extends javax.swing.JFrame {
         jf_alumwindow = new javax.swing.JFrame();
         bg1 = new javax.swing.JPanel();
         toolbar3 = new javax.swing.JToolBar();
-        jb_crearexamen2 = new javax.swing.JButton();
-        jb_elexamen2 = new javax.swing.JButton();
-        jb_notasfinales2 = new javax.swing.JButton();
+        jb_respexamen = new javax.swing.JButton();
+        jb_resultados = new javax.swing.JButton();
+        jb_notas = new javax.swing.JButton();
         jPanel14 = new javax.swing.JPanel();
-        jb_notasfinales3 = new javax.swing.JButton();
-        jb_notasfinales4 = new javax.swing.JButton();
-        jb_notasfinales5 = new javax.swing.JButton();
+        jb_ingresar = new javax.swing.JButton();
+        jb_salir = new javax.swing.JButton();
+        jb_cerrar = new javax.swing.JButton();
         jPanel15 = new javax.swing.JPanel();
-        jb_notasfinales6 = new javax.swing.JButton();
+        jb_tareas = new javax.swing.JButton();
+        jSeparator4 = new javax.swing.JToolBar.Separator();
         jPanel16 = new javax.swing.JPanel();
         jl_regresar14 = new javax.swing.JLabel();
         header9 = new javax.swing.JPanel();
@@ -490,6 +480,13 @@ public class Inicio extends javax.swing.JFrame {
         x9 = new javax.swing.JLabel();
         jl_unitec11 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
+        bg_responder = new javax.swing.JPanel();
+        bg_resultados = new javax.swing.JPanel();
+        bg_notas = new javax.swing.JPanel();
+        bg_ingresar = new javax.swing.JPanel();
+        bg_salir = new javax.swing.JPanel();
+        bg_cerrar = new javax.swing.JPanel();
+        bg_tareas = new javax.swing.JPanel();
         jp_registro = new javax.swing.JPanel();
         header1 = new javax.swing.JPanel();
         exbt_registro = new javax.swing.JPanel();
@@ -3427,6 +3424,7 @@ public class Inicio extends javax.swing.JFrame {
         jf_examen.setLocationByPlatform(true);
         jf_examen.setUndecorated(true);
         jf_examen.setResizable(false);
+        jf_examen.setSize(new java.awt.Dimension(1280, 820));
 
         bg.setBackground(new java.awt.Color(0, 0, 0));
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -3508,6 +3506,108 @@ public class Inicio extends javax.swing.JFrame {
         jLabel38.setText(".\n");
         toolbar2.add(jLabel38);
 
+        jPanel11.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel11.setMaximumSize(new java.awt.Dimension(250, 5));
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 125, Short.MAX_VALUE)
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 5, Short.MAX_VALUE)
+        );
+
+        toolbar2.add(jPanel11);
+
+        jb_ingresarm.setBackground(new java.awt.Color(153, 153, 153));
+        jb_ingresarm.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jb_ingresarm.setForeground(new java.awt.Color(0, 0, 0));
+        jb_ingresarm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/notas 32px.png"))); // NOI18N
+        jb_ingresarm.setText("Ingresar");
+        jb_ingresarm.setFocusable(false);
+        jb_ingresarm.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jb_ingresarm.setMargin(new java.awt.Insets(4, 15, 4, 15));
+        jb_ingresarm.setMaximumSize(new java.awt.Dimension(125, 67));
+        jb_ingresarm.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jb_ingresarm.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_ingresarmMouseClicked(evt);
+            }
+        });
+        toolbar2.add(jb_ingresarm);
+
+        jb_salirm.setBackground(new java.awt.Color(153, 153, 153));
+        jb_salirm.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jb_salirm.setForeground(new java.awt.Color(0, 0, 0));
+        jb_salirm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/notas 32px.png"))); // NOI18N
+        jb_salirm.setText("Log out");
+        jb_salirm.setFocusable(false);
+        jb_salirm.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jb_salirm.setMargin(new java.awt.Insets(4, 15, 4, 15));
+        jb_salirm.setMaximumSize(new java.awt.Dimension(125, 67));
+        jb_salirm.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jb_salirm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_salirmActionPerformed(evt);
+            }
+        });
+        toolbar2.add(jb_salirm);
+
+        jb_cerrarm.setBackground(new java.awt.Color(153, 153, 153));
+        jb_cerrarm.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jb_cerrarm.setForeground(new java.awt.Color(0, 0, 0));
+        jb_cerrarm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/notas 32px.png"))); // NOI18N
+        jb_cerrarm.setText("Cerrar");
+        jb_cerrarm.setFocusable(false);
+        jb_cerrarm.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jb_cerrarm.setMargin(new java.awt.Insets(4, 15, 4, 15));
+        jb_cerrarm.setMaximumSize(new java.awt.Dimension(125, 67));
+        jb_cerrarm.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jb_cerrarm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_cerrarmActionPerformed(evt);
+            }
+        });
+        toolbar2.add(jb_cerrarm);
+
+        jPanel17.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel17.setForeground(new java.awt.Color(204, 204, 204));
+        jPanel17.setMaximumSize(new java.awt.Dimension(250, 5));
+        jPanel17.setPreferredSize(new java.awt.Dimension(125, 5));
+
+        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
+        jPanel17.setLayout(jPanel17Layout);
+        jPanel17Layout.setHorizontalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 125, Short.MAX_VALUE)
+        );
+        jPanel17Layout.setVerticalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 5, Short.MAX_VALUE)
+        );
+
+        toolbar2.add(jPanel17);
+
+        jb_tareasm.setBackground(new java.awt.Color(153, 153, 153));
+        jb_tareasm.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jb_tareasm.setForeground(new java.awt.Color(0, 0, 0));
+        jb_tareasm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/notas 32px.png"))); // NOI18N
+        jb_tareasm.setText("Tareas");
+        jb_tareasm.setFocusable(false);
+        jb_tareasm.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jb_tareasm.setMargin(new java.awt.Insets(4, 15, 4, 15));
+        jb_tareasm.setMaximumSize(new java.awt.Dimension(125, 67));
+        jb_tareasm.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jb_tareasm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_tareasmActionPerformed(evt);
+            }
+        });
+        toolbar2.add(jb_tareasm);
+
         jl_regresar12.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jl_regresar12.setForeground(new java.awt.Color(255, 255, 255));
         jl_regresar12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -3525,7 +3625,7 @@ public class Inicio extends javax.swing.JFrame {
         });
         toolbar2.add(jl_regresar12);
 
-        bg.add(toolbar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 130, 420));
+        bg.add(toolbar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 130, 760));
 
         header8.setBackground(new java.awt.Color(0, 0, 0));
         header8.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -3581,7 +3681,7 @@ public class Inicio extends javax.swing.JFrame {
             header8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(header8Layout.createSequentialGroup()
                 .addComponent(exbt_registro7, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 540, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1020, Short.MAX_VALUE)
                 .addComponent(jl_unitec9, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(header8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(header8Layout.createSequentialGroup()
@@ -3600,7 +3700,7 @@ public class Inicio extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        bg.add(header8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, -1));
+        bg.add(header8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, -1));
 
         cr_examen.setBackground(new java.awt.Color(51, 51, 51));
         cr_examen.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -3661,6 +3761,11 @@ public class Inicio extends javax.swing.JFrame {
         cb_asigclases.setBackground(new java.awt.Color(0, 0, 0));
         cb_asigclases.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         cb_asigclases.setForeground(new java.awt.Color(204, 204, 204));
+        cb_asigclases.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cb_asigclasesItemStateChanged(evt);
+            }
+        });
 
         jb_crexamen.setBackground(new java.awt.Color(0, 0, 0));
         jb_crexamen.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
@@ -4000,7 +4105,7 @@ public class Inicio extends javax.swing.JFrame {
 
         cr_examen.add(jp_pregunta, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, 330, 370));
 
-        bg.add(cr_examen, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 670, 420));
+        bg.add(cr_examen, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 1150, 760));
 
         tb_elexamen.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -4013,7 +4118,7 @@ public class Inicio extends javax.swing.JFrame {
         jScrollPane11.setViewportView(tb_elexamen);
 
         jb_elexamen.setBackground(new java.awt.Color(153, 0, 0));
-        jb_elexamen.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jb_elexamen.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jb_elexamen.setForeground(new java.awt.Color(255, 255, 255));
         jb_elexamen.setText("Eliminar");
         jb_elexamen.addActionListener(new java.awt.event.ActionListener() {
@@ -4027,51 +4132,52 @@ public class Inicio extends javax.swing.JFrame {
         del_examenLayout.setHorizontalGroup(
             del_examenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(del_examenLayout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(42, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, del_examenLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jb_elexamen)
-                .addGap(26, 26, 26))
+                .addContainerGap(68, Short.MAX_VALUE)
+                .addGroup(del_examenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, del_examenLayout.createSequentialGroup()
+                        .addComponent(jb_elexamen, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(43, 43, 43))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, del_examenLayout.createSequentialGroup()
+                        .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 1020, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(62, 62, 62))))
         );
         del_examenLayout.setVerticalGroup(
             del_examenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(del_examenLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jb_elexamen)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE)
+                .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 633, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jb_elexamen, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25))
         );
 
-        bg.add(del_examen, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 670, 420));
+        bg.add(del_examen, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 1150, 760));
 
         javax.swing.GroupLayout resultsLayout = new javax.swing.GroupLayout(results);
         results.setLayout(resultsLayout);
         resultsLayout.setHorizontalGroup(
             resultsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 670, Short.MAX_VALUE)
+            .addGap(0, 1150, Short.MAX_VALUE)
         );
         resultsLayout.setVerticalGroup(
             resultsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 420, Short.MAX_VALUE)
+            .addGap(0, 760, Short.MAX_VALUE)
         );
 
-        bg.add(results, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 670, 420));
+        bg.add(results, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 1150, 760));
 
         javax.swing.GroupLayout notasLayout = new javax.swing.GroupLayout(notas);
         notas.setLayout(notasLayout);
         notasLayout.setHorizontalGroup(
             notasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 670, Short.MAX_VALUE)
+            .addGap(0, 1150, Short.MAX_VALUE)
         );
         notasLayout.setVerticalGroup(
             notasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 420, Short.MAX_VALUE)
+            .addGap(0, 760, Short.MAX_VALUE)
         );
 
-        bg.add(notas, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 670, 420));
+        bg.add(notas, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 1150, 760));
 
         javax.swing.GroupLayout jf_examenLayout = new javax.swing.GroupLayout(jf_examen.getContentPane());
         jf_examen.getContentPane().setLayout(jf_examenLayout);
@@ -4082,267 +4188,6 @@ public class Inicio extends javax.swing.JFrame {
         jf_examenLayout.setVerticalGroup(
             jf_examenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(bg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        jf_usermaestro.setLocationByPlatform(true);
-        jf_usermaestro.setUndecorated(true);
-        jf_usermaestro.setResizable(false);
-
-        jPanel7.setBackground(new java.awt.Color(0, 0, 0));
-
-        header28.setBackground(new java.awt.Color(0, 0, 0));
-        header28.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                header28MouseDragged(evt);
-            }
-        });
-        header28.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                header28MousePressed(evt);
-            }
-        });
-
-        exbt_registro27.setBackground(new java.awt.Color(0, 0, 0));
-
-        x28.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
-        x28.setForeground(new java.awt.Color(255, 255, 255));
-        x28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        x28.setText("X");
-        x28.setToolTipText("");
-        x28.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                x28MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                x28MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                x28MouseExited(evt);
-            }
-        });
-
-        javax.swing.GroupLayout exbt_registro27Layout = new javax.swing.GroupLayout(exbt_registro27);
-        exbt_registro27.setLayout(exbt_registro27Layout);
-        exbt_registro27Layout.setHorizontalGroup(
-            exbt_registro27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(exbt_registro27Layout.createSequentialGroup()
-                .addGap(4, 4, 4)
-                .addComponent(x28, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        exbt_registro27Layout.setVerticalGroup(
-            exbt_registro27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(x28, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        jl_unitec10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/unitec blanco.png"))); // NOI18N
-
-        jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/portal.png"))); // NOI18N
-
-        javax.swing.GroupLayout header28Layout = new javax.swing.GroupLayout(header28);
-        header28.setLayout(header28Layout);
-        header28Layout.setHorizontalGroup(
-            header28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(header28Layout.createSequentialGroup()
-                .addComponent(exbt_registro27, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel37)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jl_unitec10))
-        );
-        header28Layout.setVerticalGroup(
-            header28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(exbt_registro27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(header28Layout.createSequentialGroup()
-                .addComponent(jl_unitec10, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, header28Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel37))
-        );
-
-        jpb_login1.setBackground(new java.awt.Color(0, 0, 0));
-
-        tx_login1.setBackground(new java.awt.Color(204, 204, 204));
-        tx_login1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
-        tx_login1.setForeground(new java.awt.Color(255, 255, 255));
-        tx_login1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        tx_login1.setText("Acceso");
-
-        jL_loginmaestro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ingresar 128px.png"))); // NOI18N
-        jL_loginmaestro.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jL_loginmaestroMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jL_loginmaestroMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jL_loginmaestroMouseExited(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jpb_login1Layout = new javax.swing.GroupLayout(jpb_login1);
-        jpb_login1.setLayout(jpb_login1Layout);
-        jpb_login1Layout.setHorizontalGroup(
-            jpb_login1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpb_login1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(tx_login1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpb_login1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jL_loginmaestro, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jpb_login1Layout.setVerticalGroup(
-            jpb_login1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpb_login1Layout.createSequentialGroup()
-                .addComponent(tx_login1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jL_loginmaestro, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        jpb_examen.setBackground(new java.awt.Color(0, 0, 0));
-
-        tx_logout1.setBackground(new java.awt.Color(204, 204, 204));
-        tx_logout1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
-        tx_logout1.setForeground(new java.awt.Color(255, 255, 255));
-        tx_logout1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        tx_logout1.setText("Examenes");
-
-        jL_examen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/examen add 128px.png"))); // NOI18N
-        jL_examen.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jL_examenMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jL_examenMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jL_examenMouseExited(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jpb_examenLayout = new javax.swing.GroupLayout(jpb_examen);
-        jpb_examen.setLayout(jpb_examenLayout);
-        jpb_examenLayout.setHorizontalGroup(
-            jpb_examenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpb_examenLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(tx_logout1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jpb_examenLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(jL_examen)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jpb_examenLayout.setVerticalGroup(
-            jpb_examenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpb_examenLayout.createSequentialGroup()
-                .addComponent(tx_logout1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jL_examen)
-                .addGap(0, 24, Short.MAX_VALUE))
-        );
-
-        jpb_close1.setBackground(new java.awt.Color(0, 0, 0));
-
-        tx_close1.setBackground(new java.awt.Color(204, 204, 204));
-        tx_close1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
-        tx_close1.setForeground(new java.awt.Color(255, 255, 255));
-        tx_close1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        tx_close1.setText("Tareas");
-
-        jL_tareas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/tareas 128px.png"))); // NOI18N
-        jL_tareas.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jL_tareasMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jL_tareasMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jL_tareasMouseExited(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jpb_close1Layout = new javax.swing.GroupLayout(jpb_close1);
-        jpb_close1.setLayout(jpb_close1Layout);
-        jpb_close1Layout.setHorizontalGroup(
-            jpb_close1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpb_close1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(tx_close1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpb_close1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jL_tareas)
-                .addGap(28, 28, 28))
-        );
-        jpb_close1Layout.setVerticalGroup(
-            jpb_close1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpb_close1Layout.createSequentialGroup()
-                .addComponent(tx_close1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jL_tareas, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 17, Short.MAX_VALUE))
-        );
-
-        jl_regresar13.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
-        jl_regresar13.setForeground(new java.awt.Color(255, 255, 255));
-        jl_regresar13.setText("<< Regresar");
-        jl_regresar13.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jl_regresar13MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jl_regresar13MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jl_regresar13MouseExited(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(header28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap(65, Short.MAX_VALUE)
-                .addComponent(jpb_login1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
-                .addComponent(jpb_examen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
-                .addComponent(jpb_close1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(65, Short.MAX_VALUE))
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jl_regresar13, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addComponent(header28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jpb_login1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jpb_examen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jpb_close1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
-                .addComponent(jl_regresar13, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        javax.swing.GroupLayout jf_usermaestroLayout = new javax.swing.GroupLayout(jf_usermaestro.getContentPane());
-        jf_usermaestro.getContentPane().setLayout(jf_usermaestroLayout);
-        jf_usermaestroLayout.setHorizontalGroup(
-            jf_usermaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        jf_usermaestroLayout.setVerticalGroup(
-            jf_usermaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel6.setBackground(new java.awt.Color(204, 204, 204));
@@ -4685,7 +4530,10 @@ public class Inicio extends javax.swing.JFrame {
             .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        jf_alumwindow.setLocationByPlatform(true);
+        jf_alumwindow.setUndecorated(true);
         jf_alumwindow.setPreferredSize(new java.awt.Dimension(1280, 820));
+        jf_alumwindow.setResizable(false);
         jf_alumwindow.setSize(new java.awt.Dimension(1280, 820));
 
         bg1.setBackground(new java.awt.Color(0, 0, 0));
@@ -4695,63 +4543,63 @@ public class Inicio extends javax.swing.JFrame {
         toolbar3.setOrientation(javax.swing.SwingConstants.VERTICAL);
         toolbar3.setRollover(true);
 
-        jb_crearexamen2.setBackground(new java.awt.Color(153, 153, 153));
-        jb_crearexamen2.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        jb_crearexamen2.setForeground(new java.awt.Color(0, 0, 0));
-        jb_crearexamen2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/examen 32px.png"))); // NOI18N
-        jb_crearexamen2.setText("Responder");
-        jb_crearexamen2.setFocusable(false);
-        jb_crearexamen2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jb_crearexamen2.setMargin(new java.awt.Insets(4, 14, 4, 13));
-        jb_crearexamen2.setMaximumSize(new java.awt.Dimension(125, 67));
-        jb_crearexamen2.setMinimumSize(new java.awt.Dimension(100, 67));
-        jb_crearexamen2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jb_crearexamen2.addActionListener(new java.awt.event.ActionListener() {
+        jb_respexamen.setBackground(new java.awt.Color(153, 153, 153));
+        jb_respexamen.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jb_respexamen.setForeground(new java.awt.Color(0, 0, 0));
+        jb_respexamen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/examen 32px.png"))); // NOI18N
+        jb_respexamen.setText("Responder");
+        jb_respexamen.setFocusable(false);
+        jb_respexamen.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jb_respexamen.setMargin(new java.awt.Insets(4, 14, 4, 13));
+        jb_respexamen.setMaximumSize(new java.awt.Dimension(125, 67));
+        jb_respexamen.setMinimumSize(new java.awt.Dimension(100, 67));
+        jb_respexamen.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jb_respexamen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jb_crearexamen2ActionPerformed(evt);
+                jb_respexamenActionPerformed(evt);
             }
         });
-        toolbar3.add(jb_crearexamen2);
+        toolbar3.add(jb_respexamen);
 
-        jb_elexamen2.setBackground(new java.awt.Color(153, 153, 153));
-        jb_elexamen2.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        jb_elexamen2.setForeground(new java.awt.Color(0, 0, 0));
-        jb_elexamen2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/resultados 32px.png"))); // NOI18N
-        jb_elexamen2.setText("Ver Resultados");
-        jb_elexamen2.setFocusable(false);
-        jb_elexamen2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jb_elexamen2.setMargin(new java.awt.Insets(4, 5, 4, 5));
-        jb_elexamen2.setMaximumSize(new java.awt.Dimension(125, 67));
-        jb_elexamen2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jb_elexamen2.addActionListener(new java.awt.event.ActionListener() {
+        jb_resultados.setBackground(new java.awt.Color(153, 153, 153));
+        jb_resultados.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jb_resultados.setForeground(new java.awt.Color(0, 0, 0));
+        jb_resultados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/resultados 32px.png"))); // NOI18N
+        jb_resultados.setText("Ver Resultados");
+        jb_resultados.setFocusable(false);
+        jb_resultados.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jb_resultados.setMargin(new java.awt.Insets(4, 5, 4, 5));
+        jb_resultados.setMaximumSize(new java.awt.Dimension(125, 67));
+        jb_resultados.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jb_resultados.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jb_elexamen2ActionPerformed(evt);
+                jb_resultadosActionPerformed(evt);
             }
         });
-        toolbar3.add(jb_elexamen2);
+        toolbar3.add(jb_resultados);
 
-        jb_notasfinales2.setBackground(new java.awt.Color(153, 153, 153));
-        jb_notasfinales2.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        jb_notasfinales2.setForeground(new java.awt.Color(0, 0, 0));
-        jb_notasfinales2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/notas 32px.png"))); // NOI18N
-        jb_notasfinales2.setText("Notas Finales");
-        jb_notasfinales2.setFocusable(false);
-        jb_notasfinales2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jb_notasfinales2.setMargin(new java.awt.Insets(4, 15, 4, 15));
-        jb_notasfinales2.setMaximumSize(new java.awt.Dimension(125, 67));
-        jb_notasfinales2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        toolbar3.add(jb_notasfinales2);
+        jb_notas.setBackground(new java.awt.Color(153, 153, 153));
+        jb_notas.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jb_notas.setForeground(new java.awt.Color(0, 0, 0));
+        jb_notas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/notas 32px.png"))); // NOI18N
+        jb_notas.setText("Notas Finales");
+        jb_notas.setFocusable(false);
+        jb_notas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jb_notas.setMargin(new java.awt.Insets(4, 15, 4, 15));
+        jb_notas.setMaximumSize(new java.awt.Dimension(125, 67));
+        jb_notas.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        toolbar3.add(jb_notas);
 
-        jPanel14.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel14.setBackground(new java.awt.Color(204, 204, 204));
         jPanel14.setForeground(new java.awt.Color(204, 204, 204));
         jPanel14.setMaximumSize(new java.awt.Dimension(250, 5));
-        jPanel14.setPreferredSize(new java.awt.Dimension(125, 20));
+        jPanel14.setPreferredSize(new java.awt.Dimension(125, 5));
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
         jPanel14Layout.setHorizontalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 125, Short.MAX_VALUE)
+            .addGap(0, 126, Short.MAX_VALUE)
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4760,52 +4608,52 @@ public class Inicio extends javax.swing.JFrame {
 
         toolbar3.add(jPanel14);
 
-        jb_notasfinales3.setBackground(new java.awt.Color(153, 153, 153));
-        jb_notasfinales3.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        jb_notasfinales3.setForeground(new java.awt.Color(0, 0, 0));
-        jb_notasfinales3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/notas 32px.png"))); // NOI18N
-        jb_notasfinales3.setText("Ingresar");
-        jb_notasfinales3.setFocusable(false);
-        jb_notasfinales3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jb_notasfinales3.setMargin(new java.awt.Insets(4, 15, 4, 15));
-        jb_notasfinales3.setMaximumSize(new java.awt.Dimension(125, 67));
-        jb_notasfinales3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        toolbar3.add(jb_notasfinales3);
+        jb_ingresar.setBackground(new java.awt.Color(153, 153, 153));
+        jb_ingresar.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jb_ingresar.setForeground(new java.awt.Color(0, 0, 0));
+        jb_ingresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/notas 32px.png"))); // NOI18N
+        jb_ingresar.setText("Ingresar");
+        jb_ingresar.setFocusable(false);
+        jb_ingresar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jb_ingresar.setMargin(new java.awt.Insets(4, 15, 4, 15));
+        jb_ingresar.setMaximumSize(new java.awt.Dimension(125, 67));
+        jb_ingresar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        toolbar3.add(jb_ingresar);
 
-        jb_notasfinales4.setBackground(new java.awt.Color(153, 153, 153));
-        jb_notasfinales4.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        jb_notasfinales4.setForeground(new java.awt.Color(0, 0, 0));
-        jb_notasfinales4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/notas 32px.png"))); // NOI18N
-        jb_notasfinales4.setText("Log out");
-        jb_notasfinales4.setFocusable(false);
-        jb_notasfinales4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jb_notasfinales4.setMargin(new java.awt.Insets(4, 15, 4, 15));
-        jb_notasfinales4.setMaximumSize(new java.awt.Dimension(125, 67));
-        jb_notasfinales4.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        toolbar3.add(jb_notasfinales4);
+        jb_salir.setBackground(new java.awt.Color(153, 153, 153));
+        jb_salir.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jb_salir.setForeground(new java.awt.Color(0, 0, 0));
+        jb_salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/notas 32px.png"))); // NOI18N
+        jb_salir.setText("Log out");
+        jb_salir.setFocusable(false);
+        jb_salir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jb_salir.setMargin(new java.awt.Insets(4, 15, 4, 15));
+        jb_salir.setMaximumSize(new java.awt.Dimension(125, 67));
+        jb_salir.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        toolbar3.add(jb_salir);
 
-        jb_notasfinales5.setBackground(new java.awt.Color(153, 153, 153));
-        jb_notasfinales5.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        jb_notasfinales5.setForeground(new java.awt.Color(0, 0, 0));
-        jb_notasfinales5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/notas 32px.png"))); // NOI18N
-        jb_notasfinales5.setText("Cerrar");
-        jb_notasfinales5.setFocusable(false);
-        jb_notasfinales5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jb_notasfinales5.setMargin(new java.awt.Insets(4, 15, 4, 15));
-        jb_notasfinales5.setMaximumSize(new java.awt.Dimension(125, 67));
-        jb_notasfinales5.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        toolbar3.add(jb_notasfinales5);
+        jb_cerrar.setBackground(new java.awt.Color(153, 153, 153));
+        jb_cerrar.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jb_cerrar.setForeground(new java.awt.Color(0, 0, 0));
+        jb_cerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/notas 32px.png"))); // NOI18N
+        jb_cerrar.setText("Cerrar");
+        jb_cerrar.setFocusable(false);
+        jb_cerrar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jb_cerrar.setMargin(new java.awt.Insets(4, 15, 4, 15));
+        jb_cerrar.setMaximumSize(new java.awt.Dimension(125, 67));
+        jb_cerrar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        toolbar3.add(jb_cerrar);
 
-        jPanel15.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel15.setBackground(new java.awt.Color(204, 204, 204));
         jPanel15.setForeground(new java.awt.Color(204, 204, 204));
         jPanel15.setMaximumSize(new java.awt.Dimension(250, 5));
-        jPanel15.setPreferredSize(new java.awt.Dimension(125, 20));
+        jPanel15.setPreferredSize(new java.awt.Dimension(125, 5));
 
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
         jPanel15Layout.setHorizontalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 125, Short.MAX_VALUE)
+            .addGap(0, 126, Short.MAX_VALUE)
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4814,17 +4662,18 @@ public class Inicio extends javax.swing.JFrame {
 
         toolbar3.add(jPanel15);
 
-        jb_notasfinales6.setBackground(new java.awt.Color(153, 153, 153));
-        jb_notasfinales6.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        jb_notasfinales6.setForeground(new java.awt.Color(0, 0, 0));
-        jb_notasfinales6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/notas 32px.png"))); // NOI18N
-        jb_notasfinales6.setText("Tareas");
-        jb_notasfinales6.setFocusable(false);
-        jb_notasfinales6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jb_notasfinales6.setMargin(new java.awt.Insets(4, 15, 4, 15));
-        jb_notasfinales6.setMaximumSize(new java.awt.Dimension(125, 67));
-        jb_notasfinales6.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        toolbar3.add(jb_notasfinales6);
+        jb_tareas.setBackground(new java.awt.Color(153, 153, 153));
+        jb_tareas.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jb_tareas.setForeground(new java.awt.Color(0, 0, 0));
+        jb_tareas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/notas 32px.png"))); // NOI18N
+        jb_tareas.setText("Tareas");
+        jb_tareas.setFocusable(false);
+        jb_tareas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jb_tareas.setMargin(new java.awt.Insets(4, 15, 4, 15));
+        jb_tareas.setMaximumSize(new java.awt.Dimension(125, 67));
+        jb_tareas.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        toolbar3.add(jb_tareas);
+        toolbar3.add(jSeparator4);
 
         jPanel16.setBackground(new java.awt.Color(153, 153, 153));
         jPanel16.setForeground(new java.awt.Color(204, 204, 204));
@@ -4835,7 +4684,7 @@ public class Inicio extends javax.swing.JFrame {
         jPanel16.setLayout(jPanel16Layout);
         jPanel16Layout.setHorizontalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 125, Short.MAX_VALUE)
+            .addGap(0, 126, Short.MAX_VALUE)
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4917,7 +4766,7 @@ public class Inicio extends javax.swing.JFrame {
             header9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(header9Layout.createSequentialGroup()
                 .addComponent(exbt_registro8, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 870, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1020, Short.MAX_VALUE)
                 .addComponent(jl_unitec11, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(header9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(header9Layout.createSequentialGroup()
@@ -4936,7 +4785,98 @@ public class Inicio extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        bg1.add(header9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1130, -1));
+        bg1.add(header9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, -1));
+
+        javax.swing.GroupLayout bg_responderLayout = new javax.swing.GroupLayout(bg_responder);
+        bg_responder.setLayout(bg_responderLayout);
+        bg_responderLayout.setHorizontalGroup(
+            bg_responderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1150, Short.MAX_VALUE)
+        );
+        bg_responderLayout.setVerticalGroup(
+            bg_responderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 760, Short.MAX_VALUE)
+        );
+
+        bg1.add(bg_responder, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 1150, 760));
+
+        javax.swing.GroupLayout bg_resultadosLayout = new javax.swing.GroupLayout(bg_resultados);
+        bg_resultados.setLayout(bg_resultadosLayout);
+        bg_resultadosLayout.setHorizontalGroup(
+            bg_resultadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1150, Short.MAX_VALUE)
+        );
+        bg_resultadosLayout.setVerticalGroup(
+            bg_resultadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 760, Short.MAX_VALUE)
+        );
+
+        bg1.add(bg_resultados, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 1150, 760));
+
+        javax.swing.GroupLayout bg_notasLayout = new javax.swing.GroupLayout(bg_notas);
+        bg_notas.setLayout(bg_notasLayout);
+        bg_notasLayout.setHorizontalGroup(
+            bg_notasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1150, Short.MAX_VALUE)
+        );
+        bg_notasLayout.setVerticalGroup(
+            bg_notasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 760, Short.MAX_VALUE)
+        );
+
+        bg1.add(bg_notas, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 1150, 760));
+
+        javax.swing.GroupLayout bg_ingresarLayout = new javax.swing.GroupLayout(bg_ingresar);
+        bg_ingresar.setLayout(bg_ingresarLayout);
+        bg_ingresarLayout.setHorizontalGroup(
+            bg_ingresarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1150, Short.MAX_VALUE)
+        );
+        bg_ingresarLayout.setVerticalGroup(
+            bg_ingresarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 760, Short.MAX_VALUE)
+        );
+
+        bg1.add(bg_ingresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 1150, 760));
+
+        javax.swing.GroupLayout bg_salirLayout = new javax.swing.GroupLayout(bg_salir);
+        bg_salir.setLayout(bg_salirLayout);
+        bg_salirLayout.setHorizontalGroup(
+            bg_salirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1150, Short.MAX_VALUE)
+        );
+        bg_salirLayout.setVerticalGroup(
+            bg_salirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 760, Short.MAX_VALUE)
+        );
+
+        bg1.add(bg_salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 1150, 760));
+
+        javax.swing.GroupLayout bg_cerrarLayout = new javax.swing.GroupLayout(bg_cerrar);
+        bg_cerrar.setLayout(bg_cerrarLayout);
+        bg_cerrarLayout.setHorizontalGroup(
+            bg_cerrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1150, Short.MAX_VALUE)
+        );
+        bg_cerrarLayout.setVerticalGroup(
+            bg_cerrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 760, Short.MAX_VALUE)
+        );
+
+        bg1.add(bg_cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 1150, 760));
+
+        javax.swing.GroupLayout bg_tareasLayout = new javax.swing.GroupLayout(bg_tareas);
+        bg_tareas.setLayout(bg_tareasLayout);
+        bg_tareasLayout.setHorizontalGroup(
+            bg_tareasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1150, Short.MAX_VALUE)
+        );
+        bg_tareasLayout.setVerticalGroup(
+            bg_tareasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 760, Short.MAX_VALUE)
+        );
+
+        bg1.add(bg_tareas, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 1150, 760));
 
         javax.swing.GroupLayout jf_alumwindowLayout = new javax.swing.GroupLayout(jf_alumwindow.getContentPane());
         jf_alumwindow.getContentPane().setLayout(jf_alumwindowLayout);
@@ -5357,6 +5297,11 @@ public class Inicio extends javax.swing.JFrame {
 
         jl_alumno.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jl_alumno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/alumno.png"))); // NOI18N
+        jl_alumno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jl_alumnoMouseClicked(evt);
+            }
+        });
         jp_inicio.add(jl_alumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 310, 130, -1));
 
         tx_maestro.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
@@ -5371,7 +5316,7 @@ public class Inicio extends javax.swing.JFrame {
 
         tx_alumno.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
         tx_alumno.setForeground(new java.awt.Color(255, 255, 255));
-        tx_alumno.setText("REGISTRO");
+        tx_alumno.setText("ALUMNOS");
         jp_inicio.add(tx_alumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 460, -1, -1));
 
         jpb_registro.setBackground(new java.awt.Color(0, 0, 0));
@@ -5970,13 +5915,13 @@ public class Inicio extends javax.swing.JFrame {
                     &&!"".equals(jt_User.getText())
                     &&!"".equals(jft_sueldo.getText())
                     &&!"".equals(jpf_Pass.getText())) {
-                Maestro m = new Maestro(new JFormattedTextField(jft_id.getText()), 
+                Maestro ma = new Maestro(new JFormattedTextField(jft_id.getText()), 
                         new JTextField(jt_name.getText()), new JTextField(jt_profesion.getText()), 
                         new JFormattedTextField(jft_sueldo.getText()), new JTextField(jt_Rol.getText()), 
                         new JTextField(jt_User.getText()), new JPasswordField(jpf_Pass.getText()));
                 admMaestro am = new admMaestro("./maestros.cbm");
                 am.cargarArchivo();
-                am.setMaestro(m);
+                am.setMaestro(ma);
                 am.escribirArchivo();
                 JOptionPane.showMessageDialog(this, "Maestro agregado con exito");
                 
@@ -6688,7 +6633,7 @@ public class Inicio extends javax.swing.JFrame {
                     for (int i = 0; i < ((Maestro) u).getClases().size(); i++) {
                         String clase = ((Maestro) u).getClases().get(i).getNombre().getText();
                         if (clase.equals(claseselec)) {
-                            valid =false;
+                            valid =false;//Ya se le habia asignado la clase 
                         }
                     }
 
@@ -6696,26 +6641,30 @@ public class Inicio extends javax.swing.JFrame {
                     for (int i = 0; i < ((Maestro) u).getClases().size(); i++) {
                         String clase = ((Maestro) u).getClases().get(i).getNombre().getText();
                         if (clase.equals(claseselec)) {
-                            valid2 =false;
+                            valid2 =false;//Otro maestro habia sido asignado
                         }
                     }
                 }
-                
                 if (valid!=false && valid2!=false) {
                     for (int i = 0; i < ac.getListaClases().size(); i++) {
                         String clase = ac.getListaClases().get(i).getNombre().getText();
-                        if (clase.equals(claseselec)) {
-                            ((Maestro) u).getClases().add(ac.getListaClases().get(i));
-                            JOptionPane.showMessageDialog(this, "Se le asigno a la clase con exito");
+                        if (nom.equals(cbnom)) {
+                            if (clase.equals(claseselec)) {
+                                ((Maestro) u).getClases().add(ac.getListaClases().get(i));
+                                JOptionPane.showMessageDialog(this, "Se le asigno a la clase con exito");
+                                am.escribirArchivo();
+                            }
                         }
                     }
-                }else if(valid2==true) {
-                    JOptionPane.showMessageDialog(this, "Otro maestro a ha sido asignado a la clase seleccionada");
-                }else{
-                    JOptionPane.showMessageDialog(this, "Ya habia sido asignado anteriormente a la clase seleccionada");
                 }
             }
-            am.escribirArchivo();
+            //Corregir JOptionPane
+            if(valid2==true) {
+                JOptionPane.showMessageDialog(this, "Otro maestro a ha sido asignado a la clase seleccionada");
+            }else if(valid ==true){
+                JOptionPane.showMessageDialog(this, "Ya habia sido asignado anteriormente a la clase seleccionada");
+            }else{}
+            
             
         }
     }//GEN-LAST:event_jb_asclaseMouseClicked
@@ -6892,9 +6841,7 @@ public class Inicio extends javax.swing.JFrame {
 
     private void jl_regresar12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_regresar12MouseClicked
         jl_regresar12.setForeground(Color.white);
-        jf_examen.dispose();
-        jf_usermaestro.setVisible(true);
-        jf_usermaestro.setLocationRelativeTo(null);
+        Main();
     }//GEN-LAST:event_jl_regresar12MouseClicked
 
     private void jl_regresar12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_regresar12MouseEntered
@@ -6905,119 +6852,46 @@ public class Inicio extends javax.swing.JFrame {
         jl_regresar12.setForeground(Color.white);
     }//GEN-LAST:event_jl_regresar12MouseExited
 
-    private void x28MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_x28MouseClicked
-        System.exit(0);
-    }//GEN-LAST:event_x28MouseClicked
-
-    private void x28MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_x28MouseEntered
-        exbt_registro27.setBackground(Color.red);
-        x28.setForeground(Color.black);
-    }//GEN-LAST:event_x28MouseEntered
-
-    private void x28MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_x28MouseExited
-        exbt_registro27.setBackground(Color.black);
-        x28.setForeground(Color.white);
-    }//GEN-LAST:event_x28MouseExited
-
-    private void header28MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_header28MouseDragged
-        // TODO add your handling code here:
-    }//GEN-LAST:event_header28MouseDragged
-
-    private void header28MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_header28MousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_header28MousePressed
-
-    private void jL_loginmaestroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jL_loginmaestroMouseClicked
-        login();
-        x_log=2;
-        jpb_login1.setBackground(Color.black);
-        jL_loginmaestro.setForeground(Color.white);
-    }//GEN-LAST:event_jL_loginmaestroMouseClicked
-
-    private void jL_loginmaestroMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jL_loginmaestroMouseEntered
-        jpb_login1.setBackground(Color.red);
-        //jL_loginmaestro.setForeground(Color.black);
-    }//GEN-LAST:event_jL_loginmaestroMouseEntered
-
-    private void jL_loginmaestroMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jL_loginmaestroMouseExited
-        jpb_login1.setBackground(Color.black);
-        jL_loginmaestro.setForeground(Color.white);
-    }//GEN-LAST:event_jL_loginmaestroMouseExited
-
-    private void jL_examenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jL_examenMouseClicked
-        jpb_examen.setBackground(Color.black);
-        jL_examen.setForeground(Color.white);
-        OpenTest();
-        
-    }//GEN-LAST:event_jL_examenMouseClicked
-
-    private void jL_examenMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jL_examenMouseEntered
-        jpb_examen.setBackground(Color.red);
-        //jL_examen.setForeground(Color.white);
-    }//GEN-LAST:event_jL_examenMouseEntered
-
-    private void jL_examenMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jL_examenMouseExited
-        jpb_examen.setBackground(Color.black);
-        jL_examen.setForeground(Color.white);
-    }//GEN-LAST:event_jL_examenMouseExited
-
-    private void jL_tareasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jL_tareasMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jL_tareasMouseClicked
-
-    private void jL_tareasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jL_tareasMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jL_tareasMouseEntered
-
-    private void jL_tareasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jL_tareasMouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jL_tareasMouseExited
-
-    private void jl_regresar13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_regresar13MouseClicked
-        jl_regresar13.setForeground(Color.white);
-        Main();
-    }//GEN-LAST:event_jl_regresar13MouseClicked
-
-    private void jl_regresar13MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_regresar13MouseEntered
-        jl_regresar13.setForeground(Color.blue);
-    }//GEN-LAST:event_jl_regresar13MouseEntered
-
-    private void jl_regresar13MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_regresar13MouseExited
-        jl_regresar13.setForeground(Color.white);
-    }//GEN-LAST:event_jl_regresar13MouseExited
-
     private void tx_maestroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tx_maestroMouseClicked
         OpenTeacher();
     }//GEN-LAST:event_tx_maestroMouseClicked
 
     private void jb_crearexamen1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_crearexamen1ActionPerformed
-        type = 1;
-        cr_examen.setVisible(true);
-        //mod_examen.setVisible(false);
-        del_examen.setVisible(false);
-        notas.setVisible(false);
-        results.setVisible(false);
         
-        jb_crexamen.setEnabled(true);
-        jb_addq.setEnabled(false);
+        if (m!=null) {
+            
+            type = 1;
+            cr_examen.setVisible(true);
+            //mod_examen.setVisible(false);
+            del_examen.setVisible(false);
+            notas.setVisible(false);
+            results.setVisible(false);
+
+            jb_crexamen.setEnabled(true);
+            jb_addq.setEnabled(false);
+
+            jp_vof.setVisible(false);
+            jp_multiple.setVisible(false);
+            jp_numerate.setVisible(false);
+
+            cb_exam.setVisible(false);
+            cb_q.setVisible(false);
+            ta_res.setEditable(true);
+
+            jb_el.setVisible(false);
+            jb_p.setVisible(false);
+            jb_mod.setVisible(false);
+            jButton1.setVisible(true);
+
+            jb_crexamen.setText("Crear Examen");
+            jb_addq.setText("Agregar Pregunta");
+            llenarcombo(6);
+        }else{
+            JOptionPane.showMessageDialog(jf_examen, "Se debe iniciar sesion");
+        }
         
-        jp_vof.setVisible(false);
-        jp_multiple.setVisible(false);
-        jp_numerate.setVisible(false);
         
-        cb_exam.setVisible(false);
-        cb_q.setVisible(false);
-        ta_res.setEditable(true);
         
-        jb_el.setVisible(false);
-        jb_p.setVisible(false);
-        jb_mod.setVisible(false);
-        jButton1.setVisible(true);
-        
-        jb_crexamen.setText("Crear Examen");
-        jb_addq.setText("Agregar Pregunta");
-        
-        //llenarcombo(6);
     }//GEN-LAST:event_jb_crearexamen1ActionPerformed
 
     private void cb_preguntaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_preguntaItemStateChanged
@@ -7051,9 +6925,12 @@ public class Inicio extends javax.swing.JFrame {
                 fin.setHours(Integer.parseInt(cadena2[0]));
                 fin.setMinutes(Integer.parseInt(cadena2[1]));
                 fin.setSeconds(Integer.parseInt(cadena2[2]));
+                
+                
+                
                 if (type==1) {
                     Examen e = new Examen(inicio, fin, 
-                        new JTextField(jt_nexamen.getText()), new JTextArea(""));//////debo poner descripcion
+                        new JTextField(jt_nexamen.getText()), new JTextArea(""), new Clase());//////debo poner descripcion
                     ae.cargarArchivo();/////
                     ae.setExamen(e);
                     ae.escribirArchivo();
@@ -7072,6 +6949,7 @@ public class Inicio extends javax.swing.JFrame {
                             e.setDescripcion(new JTextArea(""));////////////
                             e.setInicio(inicio);
                             e.setFin(fin);
+                            e.setClase(new Clase());
                             ae.escribirArchivo();
                             
                             E = e;
@@ -7254,38 +7132,39 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jb_addqActionPerformed
 
     private void jb_modexamen1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_modexamen1ActionPerformed
-        type =2;
-        try {
-            llenarcombo(7);
-            mod_examen();
-            cr_examen.setVisible(true);
-            //mod_examen.setVisible(true);
-            del_examen.setVisible(false);
-            notas.setVisible(false);
-            results.setVisible(false);
+        if (m!=null) {
+            type =2;
+            try {
+                llenarcombo(7);
+                mod_examen();
+                cr_examen.setVisible(true);
+                //mod_examen.setVisible(true);
+                del_examen.setVisible(false);
+                notas.setVisible(false);
+                results.setVisible(false);
 
-            jb_crexamen.setEnabled(true);
-            jb_addq.setEnabled(false);
+                jb_crexamen.setEnabled(true);
+                jb_addq.setEnabled(false);
 
-            jp_vof.setVisible(false);
-            jp_multiple.setVisible(false);
-            jp_numerate.setVisible(false);
+                jp_vof.setVisible(false);
+                jp_multiple.setVisible(false);
+                jp_numerate.setVisible(false);
 
-            cb_exam.setVisible(true);
-            cb_q.setVisible(true);
-            jButton1.setVisible(false);
+                cb_exam.setVisible(true);
+                cb_q.setVisible(true);
+                jButton1.setVisible(false);
 
-            jb_p.setVisible(true);
-            jb_el.setVisible(true);
-            jb_mod.setVisible(true);
-            jb_crexamen.setText("Modificar Examen");
-            jb_addq.setText("Modificar Pregunta");
-        } catch (NullPointerException e) {
-            JOptionPane.showMessageDialog(this, "No se presenta ningun examen agregado para modificar");
+                jb_p.setVisible(true);
+                jb_el.setVisible(true);
+                jb_mod.setVisible(true);
+                jb_crexamen.setText("Modificar Examen");
+                jb_addq.setText("Modificar Pregunta");
+            } catch (NullPointerException e) {
+                JOptionPane.showMessageDialog(this, "No se presenta ningun examen agregado para modificar");
+            }
+        }else{
+            JOptionPane.showMessageDialog(jf_examen, "Se debe iniciar sesion");
         }
-        
-        
-        //llenarcombo(6);
     }//GEN-LAST:event_jb_modexamen1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -7425,12 +7304,17 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jb_eliActionPerformed
 
     private void jb_elexamen1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_elexamen1ActionPerformed
-        cr_examen.setVisible(false);
-        //mod_examen.setVisible(true);
-        del_examen.setVisible(true);
-        notas.setVisible(false);
-        results.setVisible(false);
-        listarTabla(5);
+        if (m!=null) {
+            cr_examen.setVisible(false);
+            //mod_examen.setVisible(true);
+            del_examen.setVisible(true);
+            notas.setVisible(false);
+            results.setVisible(false);
+            listarTabla(5);
+        }else{
+            JOptionPane.showMessageDialog(jf_examen, "Se debe iniciar sesion");
+        }
+        
     }//GEN-LAST:event_jb_elexamen1ActionPerformed
 
     private void jb_elexamenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_elexamenActionPerformed
@@ -7448,28 +7332,29 @@ public class Inicio extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jb_elexamenActionPerformed
 
-    private void jb_crearexamen2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_crearexamen2ActionPerformed
+    private void jb_respexamenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_respexamenActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jb_crearexamen2ActionPerformed
+    }//GEN-LAST:event_jb_respexamenActionPerformed
 
-    private void jb_elexamen2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_elexamen2ActionPerformed
+    private void jb_resultadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_resultadosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jb_elexamen2ActionPerformed
+    }//GEN-LAST:event_jb_resultadosActionPerformed
 
     private void jl_regresar14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_regresar14MouseClicked
-        // TODO add your handling code here:
+        jl_regresar14.setForeground(Color.white);
+        Main();
     }//GEN-LAST:event_jl_regresar14MouseClicked
 
     private void jl_regresar14MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_regresar14MouseEntered
-        // TODO add your handling code here:
+        jl_regresar14.setForeground(Color.blue);
     }//GEN-LAST:event_jl_regresar14MouseEntered
 
     private void jl_regresar14MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_regresar14MouseExited
-        // TODO add your handling code here:
+        jl_regresar14.setForeground(Color.white);
     }//GEN-LAST:event_jl_regresar14MouseExited
 
     private void x9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_x9MouseClicked
-        // TODO add your handling code here:
+        System.exit(0);
     }//GEN-LAST:event_x9MouseClicked
 
     private void x9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_x9MouseEntered
@@ -7487,6 +7372,41 @@ public class Inicio extends javax.swing.JFrame {
     private void header9MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_header9MousePressed
         // TODO add your handling code here:
     }//GEN-LAST:event_header9MousePressed
+
+    private void jl_alumnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_alumnoMouseClicked
+        AlumniWindow();
+    }//GEN-LAST:event_jl_alumnoMouseClicked
+
+    private void jb_ingresarmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_ingresarmMouseClicked
+        x_log=2;
+        login();
+    }//GEN-LAST:event_jb_ingresarmMouseClicked
+
+    private void jb_tareasmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_tareasmActionPerformed
+        if (m!=null) {
+            
+        }else{
+            JOptionPane.showMessageDialog(jf_examen, "Se debe iniciar sesion");
+        }
+    }//GEN-LAST:event_jb_tareasmActionPerformed
+
+    private void jb_cerrarmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_cerrarmActionPerformed
+        Main();
+    }//GEN-LAST:event_jb_cerrarmActionPerformed
+
+    private void jb_salirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_salirmActionPerformed
+        m = null;
+        cr_examen.setVisible(false);
+        del_examen.setVisible(false);
+        results.setVisible(false);
+        notas.setVisible(false);
+    }//GEN-LAST:event_jb_salirmActionPerformed
+
+    private void cb_asigclasesItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_asigclasesItemStateChanged
+        if (evt.getStateChange()==2) {
+            
+        }
+    }//GEN-LAST:event_cb_asigclasesItemStateChanged
 
     private void addq(){
         int cbq = cb_pregunta1.getSelectedIndex();
@@ -7695,8 +7615,8 @@ public class Inicio extends javax.swing.JFrame {
     
     //private void 
     
-    private void OpenTest(){
-        //jf_usermaestro.dispose();
+    private void OpenTeacher(){
+        //usermaestro.dispose();
         jf_examen.setVisible(true);
         
         cr_examen.setVisible(false);
@@ -7713,14 +7633,6 @@ public class Inicio extends javax.swing.JFrame {
 //        jf_acceso.setLocationRelativeTo(this);
 //        jf_acceso.setModal(true);//hacer prioridad la ventana
     }
-    private void OpenTeacher(){
-        this.dispose();
-        jf_usermaestro.setVisible(true);
-        jf_usermaestro.pack();
-        jf_usermaestro.setExtendedState(MAXIMIZED_BOTH);
-        
-        jf_usermaestro.setLocationRelativeTo(this);
-    }
     
     private void SetText(){
         DateFormat f = new SimpleDateFormat("HH:mm");
@@ -7731,6 +7643,15 @@ public class Inicio extends javax.swing.JFrame {
         jft_semestre1.setText(t.getSemestre().getText());
         jft_periodo1.setText(t.getPeriodo().getText());
         yc_year2.setYear(t.getYear());
+    }
+    private void AlumniWindow(){
+        this.dispose();
+        
+        jf_alumwindow.setExtendedState(MAXIMIZED_BOTH);
+        jf_alumwindow.pack();//para que la ventana se abra correctamente
+        jf_alumwindow.setLocationRelativeTo(this);
+        //jf_alumwindow.setModal(true);//hacer prioridad la ventana
+        jf_alumwindow.setVisible(true);
     }
     
     private void llenarJlist(int x){
@@ -7973,9 +7894,9 @@ public class Inicio extends javax.swing.JFrame {
     private void LogIn(int x){
         boolean valid = false; 
         if (x ==1) {//Registro
-            admUsuario au = new admUsuario("./usuario.cbm");
-            au.cargarArchivo();
-            for (Usuario u : au.getListaUsers()) {
+            admUsuario a = new admUsuario("./usuario.cbm");
+            a.cargarArchivo();
+            for (Usuario u : a.getListaUsers()) {
                 if (u.getUser().getText().equals(jt_userlogin.getText())&&
                         u.getPass().getText().equals(jpf_passlogin.getText())) {
                     valid = true;
@@ -7991,6 +7912,7 @@ public class Inicio extends javax.swing.JFrame {
             for (Maestro u : am.getListaMaestros()) {
                 if (u.getUser().getText().equals(jt_userlogin.getText())&&
                         u.getPass().getText().equals(jpf_passlogin.getText())) {
+                    m = u;
                     valid = true;
                     if (u instanceof Maestro) {}else{
                         valid = false;
@@ -8025,6 +7947,7 @@ public class Inicio extends javax.swing.JFrame {
         
         
     }
+    
     
     private void regresarclase(){
         
@@ -8122,17 +8045,24 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JPanel bg_addmaestros;
     private javax.swing.JPanel bg_alumnos;
     private javax.swing.JPanel bg_asignacion;
+    private javax.swing.JPanel bg_cerrar;
     private javax.swing.JPanel bg_clase;
     private javax.swing.JPanel bg_clases;
     private javax.swing.JPanel bg_eliminaralumnos;
     private javax.swing.JPanel bg_eliminarclase;
     private javax.swing.JPanel bg_eliminarmaestros;
+    private javax.swing.JPanel bg_ingresar;
     private javax.swing.JPanel bg_maestros;
     private javax.swing.JPanel bg_modificaralumnos;
     private javax.swing.JPanel bg_modificarclase;
     private javax.swing.JPanel bg_modificarmaestros;
     private javax.swing.ButtonGroup bg_multiple;
+    private javax.swing.JPanel bg_notas;
     private javax.swing.JPanel bg_registro;
+    private javax.swing.JPanel bg_responder;
+    private javax.swing.JPanel bg_resultados;
+    private javax.swing.JPanel bg_salir;
+    private javax.swing.JPanel bg_tareas;
     private javax.swing.ButtonGroup bg_vof;
     private javax.swing.JComboBox<String> cb_asigclases;
     private javax.swing.JComboBox<String> cb_exam;
@@ -8155,7 +8085,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JPanel exbt_registro2;
     private javax.swing.JPanel exbt_registro25;
     private javax.swing.JPanel exbt_registro26;
-    private javax.swing.JPanel exbt_registro27;
     private javax.swing.JPanel exbt_registro3;
     private javax.swing.JPanel exbt_registro4;
     private javax.swing.JPanel exbt_registro5;
@@ -8169,7 +8098,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JPanel header2;
     private javax.swing.JPanel header26;
     private javax.swing.JPanel header27;
-    private javax.swing.JPanel header28;
     private javax.swing.JPanel header3;
     private javax.swing.JPanel header4;
     private javax.swing.JPanel header5;
@@ -8179,10 +8107,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JPanel header9;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jL_examen;
     private javax.swing.JLabel jL_login;
-    private javax.swing.JLabel jL_loginmaestro;
-    private javax.swing.JLabel jL_tareas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -8213,7 +8138,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
@@ -8225,15 +8149,16 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JRadioButton jRadioButton1;
@@ -8258,6 +8183,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JToolBar.Separator jSeparator4;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
@@ -8271,27 +8197,31 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JButton jb_addq1;
     private javax.swing.JButton jb_ag;
     private javax.swing.JToggleButton jb_asclase;
+    private javax.swing.JButton jb_cerrar;
+    private javax.swing.JButton jb_cerrarm;
     private javax.swing.JButton jb_crearexamen1;
-    private javax.swing.JButton jb_crearexamen2;
     private javax.swing.JButton jb_crexamen;
     private javax.swing.JButton jb_des;
     private javax.swing.JButton jb_el;
     private javax.swing.JButton jb_elexamen;
     private javax.swing.JButton jb_elexamen1;
-    private javax.swing.JButton jb_elexamen2;
     private javax.swing.JButton jb_eli;
+    private javax.swing.JButton jb_ingresar;
+    private javax.swing.JButton jb_ingresarm;
     private javax.swing.JToggleButton jb_login;
     private javax.swing.JButton jb_mod;
     private javax.swing.JButton jb_modexamen1;
     private javax.swing.JButton jb_modi;
+    private javax.swing.JButton jb_notas;
     private javax.swing.JButton jb_notasfinales1;
-    private javax.swing.JButton jb_notasfinales2;
-    private javax.swing.JButton jb_notasfinales3;
-    private javax.swing.JButton jb_notasfinales4;
-    private javax.swing.JButton jb_notasfinales5;
-    private javax.swing.JButton jb_notasfinales6;
     private javax.swing.JButton jb_p;
+    private javax.swing.JButton jb_respexamen;
+    private javax.swing.JButton jb_resultados;
     private javax.swing.JButton jb_resultados1;
+    private javax.swing.JButton jb_salir;
+    private javax.swing.JButton jb_salirm;
+    private javax.swing.JButton jb_tareas;
+    private javax.swing.JButton jb_tareasm;
     private javax.swing.JDialog jd_acceso;
     private javax.swing.JDialog jd_addq;
     private javax.swing.JDialog jd_modq;
@@ -8304,7 +8234,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JFrame jf_examen;
     private javax.swing.JFrame jf_maestro;
     private javax.swing.JFrame jf_registro;
-    private javax.swing.JFrame jf_usermaestro;
     private javax.swing.JFormattedTextField jft_Hora;
     private javax.swing.JFormattedTextField jft_Hora1;
     private javax.swing.JFormattedTextField jft_ID;
@@ -8332,7 +8261,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jl_regresar10;
     private javax.swing.JLabel jl_regresar11;
     private javax.swing.JLabel jl_regresar12;
-    private javax.swing.JLabel jl_regresar13;
     private javax.swing.JLabel jl_regresar14;
     private javax.swing.JLabel jl_regresar2;
     private javax.swing.JLabel jl_regresar3;
@@ -8344,7 +8272,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jl_regresar9;
     private javax.swing.JLabel jl_unitec;
     private javax.swing.JLabel jl_unitec1;
-    private javax.swing.JLabel jl_unitec10;
     private javax.swing.JLabel jl_unitec11;
     private javax.swing.JLabel jl_unitec2;
     private javax.swing.JLabel jl_unitec3;
@@ -8376,16 +8303,13 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JPanel jpb_agregarclase;
     private javax.swing.JPanel jpb_agregarmaestro;
     private javax.swing.JPanel jpb_close;
-    private javax.swing.JPanel jpb_close1;
     private javax.swing.JPanel jpb_eliminaralumno;
     private javax.swing.JPanel jpb_eliminaralumnos;
     private javax.swing.JPanel jpb_eliminarclase;
     private javax.swing.JPanel jpb_eliminarclases;
     private javax.swing.JPanel jpb_eliminarmaestro;
     private javax.swing.JPanel jpb_eliminarmaestros;
-    private javax.swing.JPanel jpb_examen;
     private javax.swing.JPanel jpb_login;
-    private javax.swing.JPanel jpb_login1;
     private javax.swing.JPanel jpb_logout;
     private javax.swing.JPanel jpb_modalumno;
     private javax.swing.JPanel jpb_modclase;
@@ -8503,7 +8427,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel tx_asignacion;
     private javax.swing.JLabel tx_clases;
     private javax.swing.JLabel tx_close;
-    private javax.swing.JLabel tx_close1;
     private javax.swing.JLabel tx_cuenta;
     private javax.swing.JLabel tx_cuenta1;
     private javax.swing.JLabel tx_cuenta2;
@@ -8515,9 +8438,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel tx_deletemaestro;
     private javax.swing.JLabel tx_delmaestro;
     private javax.swing.JLabel tx_login;
-    private javax.swing.JLabel tx_login1;
     private javax.swing.JLabel tx_logout;
-    private javax.swing.JLabel tx_logout1;
     private javax.swing.JLabel tx_maestro;
     private javax.swing.JLabel tx_maestros;
     private javax.swing.JLabel tx_modalumno;
@@ -8573,7 +8494,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel x2;
     private javax.swing.JLabel x26;
     private javax.swing.JLabel x27;
-    private javax.swing.JLabel x28;
     private javax.swing.JLabel x3;
     private javax.swing.JLabel x4;
     private javax.swing.JLabel x5;

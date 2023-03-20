@@ -3,6 +3,7 @@ package pro1pr2_tatianagarcia;
 
 import com.toedter.calendar.JYearChooser;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.JFormattedTextField;
 import javax.swing.JTextField;
@@ -28,7 +29,7 @@ public class Clase implements Serializable{
         this.periodo = periodo;
         this.year = year;
     }
-
+    
     public JFormattedTextField getID() {
         return ID;
     }
@@ -84,7 +85,7 @@ public class Clase implements Serializable{
     public void setYear(int year) {
         this.year = year;
     }
-
+    
     @Override
     public String toString() {
         return ID.getText()+"";

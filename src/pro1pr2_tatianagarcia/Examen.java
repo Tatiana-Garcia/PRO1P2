@@ -12,15 +12,17 @@ public class Examen implements Serializable{
     private JTextField nombre =new JTextField(); ; 
     private JTextArea descripcion = new JTextArea(); 
     private ArrayList <Pregunta> preguntas = new ArrayList();
+    private Clase clase; 
     
     public Examen() {
     }
 
-    public Examen(Date inicio, Date fin, JTextField nombre, JTextArea descripcion) {
+    public Examen(Date inicio, Date fin, JTextField nombre, JTextArea descripcion, Clase clase) {
         this.inicio = inicio;
         this.fin = fin;
         this.nombre = nombre;
         this.descripcion = descripcion;
+        this.clase=clase;
     }
 
     public Date getInicio() {
@@ -61,6 +63,14 @@ public class Examen implements Serializable{
 
     public void setPreguntas(ArrayList<Pregunta> preguntas) {
         this.preguntas = preguntas;
+    }
+
+    public Clase getClase() {
+        return clase;
+    }
+
+    public void setClase(Clase clase) {
+        this.clase = clase;
     }
     
 
