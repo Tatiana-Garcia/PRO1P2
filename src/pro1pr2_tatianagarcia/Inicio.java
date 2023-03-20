@@ -480,12 +480,12 @@ public class Inicio extends javax.swing.JFrame {
         x9 = new javax.swing.JLabel();
         jl_unitec11 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
+        bg_panel = new javax.swing.JPanel();
         bg_responder = new javax.swing.JPanel();
+        jScrollPane12 = new javax.swing.JScrollPane();
+        jl_class = new javax.swing.JList<>();
         bg_resultados = new javax.swing.JPanel();
         bg_notas = new javax.swing.JPanel();
-        bg_ingresar = new javax.swing.JPanel();
-        bg_salir = new javax.swing.JPanel();
-        bg_cerrar = new javax.swing.JPanel();
         bg_tareas = new javax.swing.JPanel();
         jp_registro = new javax.swing.JPanel();
         header1 = new javax.swing.JPanel();
@@ -4588,6 +4588,11 @@ public class Inicio extends javax.swing.JFrame {
         jb_notas.setMargin(new java.awt.Insets(4, 15, 4, 15));
         jb_notas.setMaximumSize(new java.awt.Dimension(125, 67));
         jb_notas.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jb_notas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_notasActionPerformed(evt);
+            }
+        });
         toolbar3.add(jb_notas);
 
         jPanel14.setBackground(new java.awt.Color(204, 204, 204));
@@ -4618,6 +4623,11 @@ public class Inicio extends javax.swing.JFrame {
         jb_ingresar.setMargin(new java.awt.Insets(4, 15, 4, 15));
         jb_ingresar.setMaximumSize(new java.awt.Dimension(125, 67));
         jb_ingresar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jb_ingresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_ingresarActionPerformed(evt);
+            }
+        });
         toolbar3.add(jb_ingresar);
 
         jb_salir.setBackground(new java.awt.Color(153, 153, 153));
@@ -4630,6 +4640,11 @@ public class Inicio extends javax.swing.JFrame {
         jb_salir.setMargin(new java.awt.Insets(4, 15, 4, 15));
         jb_salir.setMaximumSize(new java.awt.Dimension(125, 67));
         jb_salir.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jb_salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_salirActionPerformed(evt);
+            }
+        });
         toolbar3.add(jb_salir);
 
         jb_cerrar.setBackground(new java.awt.Color(153, 153, 153));
@@ -4642,6 +4657,11 @@ public class Inicio extends javax.swing.JFrame {
         jb_cerrar.setMargin(new java.awt.Insets(4, 15, 4, 15));
         jb_cerrar.setMaximumSize(new java.awt.Dimension(125, 67));
         jb_cerrar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jb_cerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_cerrarActionPerformed(evt);
+            }
+        });
         toolbar3.add(jb_cerrar);
 
         jPanel15.setBackground(new java.awt.Color(204, 204, 204));
@@ -4672,6 +4692,11 @@ public class Inicio extends javax.swing.JFrame {
         jb_tareas.setMargin(new java.awt.Insets(4, 15, 4, 15));
         jb_tareas.setMaximumSize(new java.awt.Dimension(125, 67));
         jb_tareas.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jb_tareas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_tareasActionPerformed(evt);
+            }
+        });
         toolbar3.add(jb_tareas);
         toolbar3.add(jSeparator4);
 
@@ -4787,96 +4812,77 @@ public class Inicio extends javax.swing.JFrame {
 
         bg1.add(header9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, -1));
 
+        bg_panel.setBackground(new java.awt.Color(51, 51, 51));
+        bg_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        bg_responder.setBackground(new java.awt.Color(51, 51, 51));
+
         javax.swing.GroupLayout bg_responderLayout = new javax.swing.GroupLayout(bg_responder);
         bg_responder.setLayout(bg_responderLayout);
         bg_responderLayout.setHorizontalGroup(
             bg_responderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1150, Short.MAX_VALUE)
+            .addGap(0, 870, Short.MAX_VALUE)
         );
         bg_responderLayout.setVerticalGroup(
             bg_responderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
+            .addGap(0, 650, Short.MAX_VALUE)
         );
 
-        bg1.add(bg_responder, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 1150, 760));
+        bg_panel.add(bg_responder, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 870, 650));
+
+        jl_class.setBackground(new java.awt.Color(102, 102, 102));
+        jl_class.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jl_class.setForeground(new java.awt.Color(204, 204, 204));
+        jScrollPane12.setViewportView(jl_class);
+
+        bg_panel.add(jScrollPane12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 180, 390));
+
+        bg_resultados.setBackground(new java.awt.Color(51, 51, 51));
 
         javax.swing.GroupLayout bg_resultadosLayout = new javax.swing.GroupLayout(bg_resultados);
         bg_resultados.setLayout(bg_resultadosLayout);
         bg_resultadosLayout.setHorizontalGroup(
             bg_resultadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1150, Short.MAX_VALUE)
+            .addGap(0, 870, Short.MAX_VALUE)
         );
         bg_resultadosLayout.setVerticalGroup(
             bg_resultadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
+            .addGap(0, 650, Short.MAX_VALUE)
         );
 
-        bg1.add(bg_resultados, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 1150, 760));
+        bg_panel.add(bg_resultados, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 870, 650));
+
+        bg_notas.setBackground(new java.awt.Color(51, 51, 51));
 
         javax.swing.GroupLayout bg_notasLayout = new javax.swing.GroupLayout(bg_notas);
         bg_notas.setLayout(bg_notasLayout);
         bg_notasLayout.setHorizontalGroup(
             bg_notasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1150, Short.MAX_VALUE)
+            .addGap(0, 870, Short.MAX_VALUE)
         );
         bg_notasLayout.setVerticalGroup(
             bg_notasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
+            .addGap(0, 650, Short.MAX_VALUE)
         );
 
-        bg1.add(bg_notas, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 1150, 760));
+        bg_panel.add(bg_notas, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 870, 650));
 
-        javax.swing.GroupLayout bg_ingresarLayout = new javax.swing.GroupLayout(bg_ingresar);
-        bg_ingresar.setLayout(bg_ingresarLayout);
-        bg_ingresarLayout.setHorizontalGroup(
-            bg_ingresarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1150, Short.MAX_VALUE)
-        );
-        bg_ingresarLayout.setVerticalGroup(
-            bg_ingresarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
-        );
-
-        bg1.add(bg_ingresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 1150, 760));
-
-        javax.swing.GroupLayout bg_salirLayout = new javax.swing.GroupLayout(bg_salir);
-        bg_salir.setLayout(bg_salirLayout);
-        bg_salirLayout.setHorizontalGroup(
-            bg_salirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1150, Short.MAX_VALUE)
-        );
-        bg_salirLayout.setVerticalGroup(
-            bg_salirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
-        );
-
-        bg1.add(bg_salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 1150, 760));
-
-        javax.swing.GroupLayout bg_cerrarLayout = new javax.swing.GroupLayout(bg_cerrar);
-        bg_cerrar.setLayout(bg_cerrarLayout);
-        bg_cerrarLayout.setHorizontalGroup(
-            bg_cerrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1150, Short.MAX_VALUE)
-        );
-        bg_cerrarLayout.setVerticalGroup(
-            bg_cerrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
-        );
-
-        bg1.add(bg_cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 1150, 760));
+        bg_tareas.setBackground(new java.awt.Color(51, 51, 51));
 
         javax.swing.GroupLayout bg_tareasLayout = new javax.swing.GroupLayout(bg_tareas);
         bg_tareas.setLayout(bg_tareasLayout);
         bg_tareasLayout.setHorizontalGroup(
             bg_tareasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1150, Short.MAX_VALUE)
+            .addGap(0, 870, Short.MAX_VALUE)
         );
         bg_tareasLayout.setVerticalGroup(
             bg_tareasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
+            .addGap(0, 650, Short.MAX_VALUE)
         );
 
-        bg1.add(bg_tareas, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 1150, 760));
+        bg_panel.add(bg_tareas, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 870, 650));
+
+        bg1.add(bg_panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 1150, 760));
 
         javax.swing.GroupLayout jf_alumwindowLayout = new javax.swing.GroupLayout(jf_alumwindow.getContentPane());
         jf_alumwindow.getContentPane().setLayout(jf_alumwindowLayout);
@@ -6925,12 +6931,19 @@ public class Inicio extends javax.swing.JFrame {
                 fin.setHours(Integer.parseInt(cadena2[0]));
                 fin.setMinutes(Integer.parseInt(cadena2[1]));
                 fin.setSeconds(Integer.parseInt(cadena2[2]));
-                
+                admClases ac = new admClases("./clases.cbm");
+                ac.cargarArchivo();
+                Clase clase = null;
+                for (Clase c : ac.getListaClases()) {
+                    if (c.getNombre().getText().equals(cb_asigclases.getSelectedItem().toString())) {
+                        clase = c; 
+                    }
+                }
                 
                 
                 if (type==1) {
                     Examen e = new Examen(inicio, fin, 
-                        new JTextField(jt_nexamen.getText()), new JTextArea(""), new Clase());//////debo poner descripcion
+                        new JTextField(jt_nexamen.getText()), new JTextArea(""), clase);//////debo poner descripcion
                     ae.cargarArchivo();/////
                     ae.setExamen(e);
                     ae.escribirArchivo();
@@ -6949,7 +6962,7 @@ public class Inicio extends javax.swing.JFrame {
                             e.setDescripcion(new JTextArea(""));////////////
                             e.setInicio(inicio);
                             e.setFin(fin);
-                            e.setClase(new Clase());
+                            e.setClase(clase);
                             ae.escribirArchivo();
                             
                             E = e;
@@ -7333,11 +7346,30 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jb_elexamenActionPerformed
 
     private void jb_respexamenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_respexamenActionPerformed
-        // TODO add your handling code here:
+        if (a!=null) {
+            bg_panel.setVisible(true);
+            bg_resultados.setVisible(false);
+            bg_notas.setVisible(false);
+            bg_tareas.setVisible(false);
+            bg_panel.setVisible(true);
+            llenarJlist(3);
+            
+        }else{
+            JOptionPane.showMessageDialog(jf_alumwindow, "Se debe iniciar sesion");
+        }
     }//GEN-LAST:event_jb_respexamenActionPerformed
 
     private void jb_resultadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_resultadosActionPerformed
-        // TODO add your handling code here:
+        if (a!=null) {
+            bg_panel.setVisible(false);
+            bg_resultados.setVisible(true);
+            bg_notas.setVisible(false);
+            bg_tareas.setVisible(false);
+            bg_panel.setVisible(true);
+            llenarJlist(3);
+        }else{
+            JOptionPane.showMessageDialog(jf_alumwindow, "Se debe iniciar sesion");
+        }
     }//GEN-LAST:event_jb_resultadosActionPerformed
 
     private void jl_regresar14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_regresar14MouseClicked
@@ -7408,6 +7440,67 @@ public class Inicio extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_cb_asigclasesItemStateChanged
 
+    private void jb_ingresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_ingresarActionPerformed
+        x_log=3;
+        bg_panel.setVisible(false);
+        login();
+    }//GEN-LAST:event_jb_ingresarActionPerformed
+
+    private void jb_notasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_notasActionPerformed
+        if (a!=null) {
+            bg_panel.setVisible(false);
+            bg_resultados.setVisible(false);
+            bg_notas.setVisible(true);
+            bg_tareas.setVisible(false);
+            bg_panel.setVisible(true);
+            llenarJlist(3);
+        }else{
+            JOptionPane.showMessageDialog(jf_alumwindow, "Se debe iniciar sesion");
+        }
+    }//GEN-LAST:event_jb_notasActionPerformed
+
+    private void jb_tareasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_tareasActionPerformed
+        if (a!=null) {
+            bg_panel.setVisible(false);
+            bg_resultados.setVisible(false);
+            bg_notas.setVisible(false);
+            bg_tareas.setVisible(true);
+            bg_panel.setVisible(true);
+            llenarJlist(3);
+        }else{
+            JOptionPane.showMessageDialog(jf_alumwindow, "Se debe iniciar sesion");
+        }
+    }//GEN-LAST:event_jb_tareasActionPerformed
+
+    private void jb_cerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_cerrarActionPerformed
+        Main();
+        bg_panel.setVisible(false);
+    }//GEN-LAST:event_jb_cerrarActionPerformed
+
+    private void jb_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_salirActionPerformed
+       m = null;
+       bg_panel.setVisible(false);
+       
+    }//GEN-LAST:event_jb_salirActionPerformed
+
+    private void asigexamenes(){
+        ae.cargarArchivo();
+        admAlumno aa = new admAlumno("./alumnos.cbm");
+        aa.cargarArchivo();
+        for (int i=0; i< aa.getListaAlumnos().get(in_alumno).getClases().size();i++) {
+            for (Examen e : ae.getListaExamen()) {
+                String nom = e.getClase().getNombre().getText();//nombre de clase en examen
+                String nom2 = aa.getListaAlumnos().get(in_alumno).getClases().get(i).getNombre().getText();///indice de la clase del alumno
+                if (nom.equals(nom2)) {
+                    aa.getListaAlumnos().get(in_alumno).getClases().get(i).getExamenes().add(e);
+                    aa.escribirArchivo();
+                    a = aa.getListaAlumnos().get(in_alumno);
+                }
+            }
+        }
+            
+    }
+    
     private void addq(){
         int cbq = cb_pregunta1.getSelectedIndex();
         int cbq_index = cb_q1.getSelectedIndex();
@@ -7681,6 +7774,19 @@ public class Inicio extends javax.swing.JFrame {
                 jl_clases2.setModel(modelo);
             }
         }
+        if (x==3) {
+            DefaultListModel modelo
+                    = (DefaultListModel) jl_class.getModel();
+            modelo.removeAllElements();
+            admAlumno aa= new admAlumno("./alumnos.cbm");
+            aa.cargarArchivo();
+            for (int i = 0; i < aa.getListaAlumnos().get(in_alumno).getClases().size(); i++) {
+                String c = aa.getListaAlumnos().get(in_alumno).getClases().get(i).getNombre().getText();
+                modelo.addElement(c
+                );
+                jl_class.setModel(modelo);
+            }
+        }
         
     }
     private void llenarcombo(int x) {
@@ -7858,12 +7964,12 @@ public class Inicio extends javax.swing.JFrame {
                 tb_elexamen.setModel(new javax.swing.table.DefaultTableModel(
                         new Object[][]{},
                         new String[]{
-                            "Nombre","Inicio","Fin"
+                            "Nombre","Inicio","Fin","Clase"
                         }
                 ));
                 for (Examen t : ae.getListaExamen()) {
                     
-                    Object[] row = {  t.getNombre().getText(),t.getInicio().toString(),t.getFin().toString()  };
+                    Object[] row = {  t.getNombre().getText(),t.getInicio().toString(),t.getFin().toString(),t.getClase().getNombre().getText() };
                     DefaultTableModel modelo = (DefaultTableModel) tb_elexamen.getModel();
                     modelo.addRow(row);
                     tb_elexamen.setModel(modelo);
@@ -7923,14 +8029,22 @@ public class Inicio extends javax.swing.JFrame {
         if (x==3) {//Alumno
             admAlumno aa = new admAlumno("./alumnos.cbm");
             aa.cargarArchivo();
+            int con = 0; 
             for (Alumno u : aa.getListaAlumnos()) {
                 if (u.getUser().getText().equals(jt_userlogin.getText())&&
                         u.getPass().getText().equals(jpf_passlogin.getText())) {
                     valid = true;
+                    
                     if (u instanceof Alumno) {}else{
                         valid = false;
                     }
+                    if (valid) {
+                        a = u; 
+                        in_alumno = con;
+                        asigexamenes();
+                    }
                 }
+                con++;
             }
         }
         if (x!=0) {
@@ -8032,7 +8146,7 @@ public class Inicio extends javax.swing.JFrame {
     ArrayList<Clase> clases = new ArrayList();
     ArrayList<Respuesta> res = new ArrayList();
     Examen E; 
-    int exam_index, cb_index;
+    int exam_index, cb_index, jl_indexclase, in_alumno;
     String loguser = "";
     Maestro m; 
     Alumno a; 
@@ -8045,23 +8159,21 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JPanel bg_addmaestros;
     private javax.swing.JPanel bg_alumnos;
     private javax.swing.JPanel bg_asignacion;
-    private javax.swing.JPanel bg_cerrar;
     private javax.swing.JPanel bg_clase;
     private javax.swing.JPanel bg_clases;
     private javax.swing.JPanel bg_eliminaralumnos;
     private javax.swing.JPanel bg_eliminarclase;
     private javax.swing.JPanel bg_eliminarmaestros;
-    private javax.swing.JPanel bg_ingresar;
     private javax.swing.JPanel bg_maestros;
     private javax.swing.JPanel bg_modificaralumnos;
     private javax.swing.JPanel bg_modificarclase;
     private javax.swing.JPanel bg_modificarmaestros;
     private javax.swing.ButtonGroup bg_multiple;
     private javax.swing.JPanel bg_notas;
+    private javax.swing.JPanel bg_panel;
     private javax.swing.JPanel bg_registro;
     private javax.swing.JPanel bg_responder;
     private javax.swing.JPanel bg_resultados;
-    private javax.swing.JPanel bg_salir;
     private javax.swing.JPanel bg_tareas;
     private javax.swing.ButtonGroup bg_vof;
     private javax.swing.JComboBox<String> cb_asigclases;
@@ -8172,6 +8284,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
+    private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -8251,6 +8364,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jl_alumno;
     private javax.swing.JList<String> jl_clases;
     private javax.swing.JList<String> jl_clases2;
+    private javax.swing.JList<String> jl_class;
     private javax.swing.JLabel jl_maestro;
     private javax.swing.JLabel jl_numq;
     private javax.swing.JLabel jl_numq1;

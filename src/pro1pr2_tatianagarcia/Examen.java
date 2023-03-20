@@ -13,6 +13,7 @@ public class Examen implements Serializable{
     private JTextArea descripcion = new JTextArea(); 
     private ArrayList <Pregunta> preguntas = new ArrayList();
     private Clase clase; 
+    private double puntuacion;
     
     public Examen() {
     }
@@ -72,8 +73,15 @@ public class Examen implements Serializable{
     public void setClase(Clase clase) {
         this.clase = clase;
     }
-    
 
+    public double getPuntuacion() {
+        return puntuacion;
+    }
+
+    public void setPuntuacion(double puntuacion) {
+        this.puntuacion = puntuacion;
+    }
+    
     
     @Override
     public String toString() {
