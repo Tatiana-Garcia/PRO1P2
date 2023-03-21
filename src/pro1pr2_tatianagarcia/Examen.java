@@ -12,8 +12,11 @@ public class Examen implements Serializable{
     private JTextField nombre =new JTextField(); ; 
     private JTextArea descripcion = new JTextArea(); 
     private ArrayList <Pregunta> preguntas = new ArrayList();
+    private ArrayList<Answers> respuestas = new ArrayList();
+    
     private Clase clase; 
     private double puntuacion;
+    private boolean valid;
     
     public Examen() {
     }
@@ -24,6 +27,7 @@ public class Examen implements Serializable{
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.clase=clase;
+        valid = true;
     }
 
     public Date getInicio() {
@@ -81,7 +85,22 @@ public class Examen implements Serializable{
     public void setPuntuacion(double puntuacion) {
         this.puntuacion = puntuacion;
     }
-    
+
+    public boolean isValid() {
+        return valid;
+    }
+
+    public void setValid(boolean valid) {
+        this.valid = valid;
+    }
+
+    public ArrayList<Answers> getRespuestas() {
+        return respuestas;
+    }
+
+    public void setRespuestas(ArrayList<Answers> respuestas) {
+        this.respuestas = respuestas;
+    }
     
     @Override
     public String toString() {

@@ -3,13 +3,20 @@ package pro1pr2_tatianagarcia;
 
 import java.util.ArrayList;
 import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 public class Enumerate extends Pregunta{
     private ArrayList <Respuesta> res = new ArrayList();
+    
 
     public Enumerate() {
         super();
     }
+
+    public Enumerate(double valor, JTextArea pregunta) {
+        super(valor, pregunta);
+    }
+    
 
     public Enumerate(double valor, JTextArea pregunta, ArrayList <Respuesta> res) {
         super(valor, pregunta);

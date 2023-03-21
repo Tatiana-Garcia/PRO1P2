@@ -32,6 +32,7 @@ public class Inicio extends javax.swing.JFrame {
     int x_log =0;
     admUsuario au = new admUsuario("./usuario.cbm");
     admExamen ae = new admExamen("./examen.cbm");
+    
     admRespuesta ar = new admRespuesta("./respuesta.cbm");
     int type=0; 
     
@@ -482,11 +483,39 @@ public class Inicio extends javax.swing.JFrame {
         jLabel41 = new javax.swing.JLabel();
         bg_panel = new javax.swing.JPanel();
         bg_responder = new javax.swing.JPanel();
+        jScrollPane13 = new javax.swing.JScrollPane();
+        jt_examen = new javax.swing.JTable();
+        jb_rlexamen = new javax.swing.JButton();
         jScrollPane12 = new javax.swing.JScrollPane();
         jl_class = new javax.swing.JList<>();
         bg_resultados = new javax.swing.JPanel();
         bg_notas = new javax.swing.JPanel();
         bg_tareas = new javax.swing.JPanel();
+        jd_examen = new javax.swing.JDialog();
+        jPanel7 = new javax.swing.JPanel();
+        jPanel12 = new javax.swing.JPanel();
+        header28 = new javax.swing.JPanel();
+        exbt_registro27 = new javax.swing.JPanel();
+        x28 = new javax.swing.JLabel();
+        jl_nomexamen = new javax.swing.JLabel();
+        jl_p = new javax.swing.JLabel();
+        jScrollPane14 = new javax.swing.JScrollPane();
+        ta_pyd = new javax.swing.JTextArea();
+        bg_VOF = new javax.swing.JPanel();
+        rbe_true = new javax.swing.JRadioButton();
+        rbe_false = new javax.swing.JRadioButton();
+        bg_MULTIPLE = new javax.swing.JPanel();
+        RadioButton1 = new javax.swing.JRadioButton();
+        RadioButton2 = new javax.swing.JRadioButton();
+        RadioButton3 = new javax.swing.JRadioButton();
+        RadioButton4 = new javax.swing.JRadioButton();
+        bg_ENUM = new javax.swing.JPanel();
+        jt_res = new javax.swing.JTextField();
+        jSeparator5 = new javax.swing.JSeparator();
+        jb_next = new javax.swing.JButton();
+        jb_return = new javax.swing.JButton();
+        bg_VoF = new javax.swing.ButtonGroup();
+        bg_Multiple = new javax.swing.ButtonGroup();
         jp_registro = new javax.swing.JPanel();
         header1 = new javax.swing.JPanel();
         exbt_registro = new javax.swing.JPanel();
@@ -4817,15 +4846,48 @@ public class Inicio extends javax.swing.JFrame {
 
         bg_responder.setBackground(new java.awt.Color(51, 51, 51));
 
+        jt_examen.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane13.setViewportView(jt_examen);
+
+        jb_rlexamen.setBackground(new java.awt.Color(0, 102, 102));
+        jb_rlexamen.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jb_rlexamen.setForeground(new java.awt.Color(204, 204, 204));
+        jb_rlexamen.setText("Realizar Examen");
+        jb_rlexamen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_rlexamenActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout bg_responderLayout = new javax.swing.GroupLayout(bg_responder);
         bg_responder.setLayout(bg_responderLayout);
         bg_responderLayout.setHorizontalGroup(
             bg_responderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 870, Short.MAX_VALUE)
+            .addGroup(bg_responderLayout.createSequentialGroup()
+                .addGroup(bg_responderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(bg_responderLayout.createSequentialGroup()
+                        .addGap(79, 79, 79)
+                        .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(bg_responderLayout.createSequentialGroup()
+                        .addGap(352, 352, 352)
+                        .addComponent(jb_rlexamen, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(105, Short.MAX_VALUE))
         );
         bg_responderLayout.setVerticalGroup(
             bg_responderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 650, Short.MAX_VALUE)
+            .addGroup(bg_responderLayout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 485, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39)
+                .addComponent(jb_rlexamen, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(54, Short.MAX_VALUE))
         );
 
         bg_panel.add(bg_responder, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 870, 650));
@@ -4833,6 +4895,12 @@ public class Inicio extends javax.swing.JFrame {
         jl_class.setBackground(new java.awt.Color(102, 102, 102));
         jl_class.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jl_class.setForeground(new java.awt.Color(204, 204, 204));
+        jl_class.setModel(new DefaultListModel());
+        jl_class.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jl_classMouseClicked(evt);
+            }
+        });
         jScrollPane12.setViewportView(jl_class);
 
         bg_panel.add(jScrollPane12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 180, 390));
@@ -4894,6 +4962,267 @@ public class Inicio extends javax.swing.JFrame {
             jf_alumwindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(bg1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
+
+        jd_examen.setModal(true);
+        jd_examen.setUndecorated(true);
+        jd_examen.setResizable(false);
+        jd_examen.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel7.setBackground(new java.awt.Color(204, 204, 204));
+
+        jPanel12.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        header28.setBackground(new java.awt.Color(0, 0, 0));
+        header28.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                header28MouseDragged(evt);
+            }
+        });
+        header28.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                header28MousePressed(evt);
+            }
+        });
+
+        exbt_registro27.setBackground(new java.awt.Color(0, 0, 0));
+
+        x28.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        x28.setForeground(new java.awt.Color(255, 255, 255));
+        x28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        x28.setText("X");
+        x28.setToolTipText("");
+        x28.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                x28MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                x28MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                x28MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout exbt_registro27Layout = new javax.swing.GroupLayout(exbt_registro27);
+        exbt_registro27.setLayout(exbt_registro27Layout);
+        exbt_registro27Layout.setHorizontalGroup(
+            exbt_registro27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(exbt_registro27Layout.createSequentialGroup()
+                .addGap(4, 4, 4)
+                .addComponent(x28, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        exbt_registro27Layout.setVerticalGroup(
+            exbt_registro27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(x28, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout header28Layout = new javax.swing.GroupLayout(header28);
+        header28.setLayout(header28Layout);
+        header28Layout.setHorizontalGroup(
+            header28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(header28Layout.createSequentialGroup()
+                .addComponent(exbt_registro27, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        header28Layout.setVerticalGroup(
+            header28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(exbt_registro27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jPanel12.add(header28, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 676, -1));
+
+        jl_nomexamen.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jl_nomexamen.setForeground(new java.awt.Color(204, 204, 204));
+        jl_nomexamen.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jl_nomexamen.setText("Examen");
+        jPanel12.add(jl_nomexamen, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 51, 676, 50));
+
+        jl_p.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jl_p.setForeground(new java.awt.Color(204, 204, 204));
+        jl_p.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jl_p.setText("Pregunta");
+        jPanel12.add(jl_p, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 107, 129, 44));
+
+        ta_pyd.setBackground(new java.awt.Color(0, 0, 0));
+        ta_pyd.setColumns(20);
+        ta_pyd.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        ta_pyd.setForeground(new java.awt.Color(204, 204, 204));
+        ta_pyd.setRows(5);
+        ta_pyd.setBorder(null);
+        ta_pyd.setCaretColor(new java.awt.Color(0, 0, 0));
+        ta_pyd.setDisabledTextColor(new java.awt.Color(204, 204, 204));
+        ta_pyd.setSelectedTextColor(new java.awt.Color(204, 204, 204));
+        ta_pyd.setSelectionColor(new java.awt.Color(0, 0, 0));
+        jScrollPane14.setViewportView(ta_pyd);
+
+        jPanel12.add(jScrollPane14, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 157, 652, 85));
+
+        bg_VOF.setBackground(new java.awt.Color(0, 0, 0));
+
+        rbe_true.setBackground(new java.awt.Color(0, 0, 0));
+        bg_VoF.add(rbe_true);
+        rbe_true.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        rbe_true.setForeground(new java.awt.Color(204, 204, 204));
+        rbe_true.setText("Verdadero");
+
+        rbe_false.setBackground(new java.awt.Color(0, 0, 0));
+        bg_VoF.add(rbe_false);
+        rbe_false.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        rbe_false.setForeground(new java.awt.Color(204, 204, 204));
+        rbe_false.setText("Falso");
+
+        javax.swing.GroupLayout bg_VOFLayout = new javax.swing.GroupLayout(bg_VOF);
+        bg_VOF.setLayout(bg_VOFLayout);
+        bg_VOFLayout.setHorizontalGroup(
+            bg_VOFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(bg_VOFLayout.createSequentialGroup()
+                .addGap(129, 129, 129)
+                .addGroup(bg_VOFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(rbe_false, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rbe_true, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(146, Short.MAX_VALUE))
+        );
+        bg_VOFLayout.setVerticalGroup(
+            bg_VOFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(bg_VOFLayout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(rbe_true)
+                .addGap(31, 31, 31)
+                .addComponent(rbe_false)
+                .addContainerGap(67, Short.MAX_VALUE))
+        );
+
+        jPanel12.add(bg_VOF, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 260, -1, 180));
+
+        bg_MULTIPLE.setBackground(new java.awt.Color(0, 0, 0));
+
+        RadioButton1.setBackground(new java.awt.Color(0, 0, 0));
+        bg_Multiple.add(RadioButton1);
+        RadioButton1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        RadioButton1.setForeground(new java.awt.Color(204, 204, 204));
+        RadioButton1.setText("RadioButton1");
+
+        RadioButton2.setBackground(new java.awt.Color(0, 0, 0));
+        bg_Multiple.add(RadioButton2);
+        RadioButton2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        RadioButton2.setForeground(new java.awt.Color(204, 204, 204));
+        RadioButton2.setText("RadioButton2");
+
+        RadioButton3.setBackground(new java.awt.Color(0, 0, 0));
+        bg_Multiple.add(RadioButton3);
+        RadioButton3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        RadioButton3.setForeground(new java.awt.Color(204, 204, 204));
+        RadioButton3.setText("RadioButton1");
+
+        RadioButton4.setBackground(new java.awt.Color(0, 0, 0));
+        bg_Multiple.add(RadioButton4);
+        RadioButton4.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        RadioButton4.setForeground(new java.awt.Color(204, 204, 204));
+        RadioButton4.setText("RadioButton1");
+
+        javax.swing.GroupLayout bg_MULTIPLELayout = new javax.swing.GroupLayout(bg_MULTIPLE);
+        bg_MULTIPLE.setLayout(bg_MULTIPLELayout);
+        bg_MULTIPLELayout.setHorizontalGroup(
+            bg_MULTIPLELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(bg_MULTIPLELayout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addGroup(bg_MULTIPLELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(RadioButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
+                    .addComponent(RadioButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(RadioButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(RadioButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
+        );
+        bg_MULTIPLELayout.setVerticalGroup(
+            bg_MULTIPLELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(bg_MULTIPLELayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(RadioButton1)
+                .addGap(18, 18, 18)
+                .addComponent(RadioButton2)
+                .addGap(18, 18, 18)
+                .addComponent(RadioButton3)
+                .addGap(18, 18, 18)
+                .addComponent(RadioButton4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel12.add(bg_MULTIPLE, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 260, -1, 180));
+
+        bg_ENUM.setBackground(new java.awt.Color(0, 0, 0));
+
+        jt_res.setBackground(new java.awt.Color(0, 0, 0));
+        jt_res.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jt_res.setForeground(new java.awt.Color(204, 204, 204));
+        jt_res.setBorder(null);
+
+        jSeparator5.setBackground(new java.awt.Color(0, 0, 102));
+        jSeparator5.setForeground(new java.awt.Color(102, 0, 0));
+
+        javax.swing.GroupLayout bg_ENUMLayout = new javax.swing.GroupLayout(bg_ENUM);
+        bg_ENUM.setLayout(bg_ENUMLayout);
+        bg_ENUMLayout.setHorizontalGroup(
+            bg_ENUMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(bg_ENUMLayout.createSequentialGroup()
+                .addGap(73, 73, 73)
+                .addGroup(bg_ENUMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jt_res, javax.swing.GroupLayout.DEFAULT_SIZE, 222, Short.MAX_VALUE)
+                    .addComponent(jSeparator5))
+                .addContainerGap(77, Short.MAX_VALUE))
+        );
+        bg_ENUMLayout.setVerticalGroup(
+            bg_ENUMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(bg_ENUMLayout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addComponent(jt_res, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(75, Short.MAX_VALUE))
+        );
+
+        jPanel12.add(bg_ENUM, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 260, -1, 180));
+
+        jb_next.setBackground(new java.awt.Color(0, 0, 102));
+        jb_next.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        jb_next.setForeground(new java.awt.Color(204, 204, 204));
+        jb_next.setText("Siguiente");
+        jb_next.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_nextActionPerformed(evt);
+            }
+        });
+        jPanel12.add(jb_next, new org.netbeans.lib.awtextra.AbsoluteConstraints(526, 410, 130, -1));
+
+        jb_return.setBackground(new java.awt.Color(0, 0, 102));
+        jb_return.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        jb_return.setText("Anterior");
+        jb_return.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_returnActionPerformed(evt);
+            }
+        });
+        jPanel12.add(jb_return, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jd_examen.getContentPane().add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 480));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -7353,6 +7682,15 @@ public class Inicio extends javax.swing.JFrame {
             bg_tareas.setVisible(false);
             bg_panel.setVisible(true);
             llenarJlist(3);
+            admAlumno aa = new admAlumno("./alumnos.cbm");
+                aa.cargarArchivo();
+                ae.cargarArchivo();
+                jt_examen.setModel(new javax.swing.table.DefaultTableModel(
+                        new Object[][]{},
+                        new String[]{
+                            "Nombre","Inicio","Fin","Clase"
+                        }
+                ));
             
         }else{
             JOptionPane.showMessageDialog(jf_alumwindow, "Se debe iniciar sesion");
@@ -7407,6 +7745,7 @@ public class Inicio extends javax.swing.JFrame {
 
     private void jl_alumnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_alumnoMouseClicked
         AlumniWindow();
+        bg_panel.setVisible(false);
     }//GEN-LAST:event_jl_alumnoMouseClicked
 
     private void jb_ingresarmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_ingresarmMouseClicked
@@ -7478,20 +7817,237 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jb_cerrarActionPerformed
 
     private void jb_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_salirActionPerformed
-       m = null;
+       a = null;
        bg_panel.setVisible(false);
        
     }//GEN-LAST:event_jb_salirActionPerformed
 
+    private void jl_classMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_classMouseClicked
+        if (jl_class.getSelectedIndex()>=0) {
+            jl_indexclase = jl_class.getSelectedIndex();
+            listarTabla(6);
+        }
+    }//GEN-LAST:event_jl_classMouseClicked
+
+    private void jb_rlexamenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_rlexamenActionPerformed
+        if (jt_examen.getSelectedRow()>=0) {///Validar el examen este habilitado
+            aex_index = jt_examen.getSelectedRow();
+            admAlumno aa = new admAlumno("./alumnos.cbm");
+            aa.cargarArchivo();
+//            int tam = aa.getListaAlumnos().get(in_alumno).getClases().get(jl_indexclase).getExamenes().get(aex_index)
+//                    .getPreguntas().size();
+//            ArrayList <Answers> answers = new ArrayList(tam);
+//            System.out.println(answers.size());
+//            aa.getListaAlumnos().get(in_alumno).getClases().get(jl_indexclase).getExamenes().get(aex_index)
+//                    .setRespuestas(new ArrayList(answers));
+            Exa = aa.getListaAlumnos().get(in_alumno).getClases().get(jl_indexclase).getExamenes().get(aex_index);
+            
+            p_index =0;
+            Preguntas();
+            jb_return.setEnabled(false);
+            jb_next.setText("Siguiente");
+            ExamenWindow();
+        }else{
+            JOptionPane.showMessageDialog(jf_alumwindow, "Debe seleccionar algun examen habilitado");
+        }
+        
+    }//GEN-LAST:event_jb_rlexamenActionPerformed
+
+    private void x28MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_x28MouseClicked
+        jd_examen.dispose();
+    }//GEN-LAST:event_x28MouseClicked
+
+    private void x28MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_x28MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_x28MouseEntered
+
+    private void x28MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_x28MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_x28MouseExited
+
+    private void header28MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_header28MouseDragged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_header28MouseDragged
+
+    private void header28MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_header28MousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_header28MousePressed
+
+    private void jb_nextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_nextActionPerformed
+        
+        int cbq_index = p_index+1;
+        if (cbq_index==Exa.getPreguntas().size()) {
+            jd_examen.dispose();
+            bg_VoF.clearSelection();
+            bg_Multiple.clearSelection();
+            jt_res.setText("");
+            
+            //respuestas();
+//            jb_return.setEnabled(true);
+//            Preguntas();
+            //Entregar Examen 
+        }else if (cbq_index==Exa.getPreguntas().size()-1) {
+            jb_return.setEnabled(true);
+            jb_next.setText("Entregar Examen");
+            p_index++;
+            Preguntas();
+            
+        }else{
+            jb_return.setEnabled(true);
+            //probando();
+            respuestas();
+            p_index++;
+            Preguntas();
+            
+        }
+        
+    }//GEN-LAST:event_jb_nextActionPerformed
+
+    private void jb_returnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_returnActionPerformed
+        
+        int cbq_index = p_index-1;
+        if (cbq_index==0) {
+            jb_return.setEnabled(false);
+            p_index--;
+            Preguntas();
+            
+        }else if(cbq_index==Exa.getPreguntas().size()-2){
+            jb_next.setText("Siguiente");
+            p_index--;
+            Preguntas();
+            
+        }
+        else{
+            p_index--;
+            Preguntas();
+            
+            //jb_return.setEnabled(true);
+        }
+        
+    }//GEN-LAST:event_jb_returnActionPerformed
+
+//    private void probando(){
+//        //Exa.getRespuestas().get(p_index);
+//        Pregunta cbq = Exa.getPreguntas().get(p_index);
+//        if (cbq instanceof VoF) {
+//            System.out.println("");
+//            if (bg_VoF.getSelection().equals(((VoF)Exa.getPreguntas().get(p_index)).getBotones().getSelection())) {
+//                JOptionPane.showMessageDialog(jd_examen, "Correcto");
+//            }
+//            else{
+//                JOptionPane.showMessageDialog(jd_examen, "InCorrecto");
+//            }
+//        }
+//        
+//    }
+    private void respuestas(){
+        //Exa.getRespuestas().get(p_index);
+        
+        admAlumno aa = new admAlumno("./alumnos.cbm");
+        aa.cargarArchivo();
+        Pregunta cbq = aa.getListaAlumnos().get(in_alumno).getClases().get(jl_indexclase).getExamenes()
+                        .get(exam_index).getPreguntas().get(p_index);
+        if (cbq instanceof VoF) {
+//            JRadioButton [] bottons = {rbe_true,rbe_false};
+//            try{
+//               ((ToF) aa.getListaAlumnos().get(in_alumno).getClases().get(jl_indexclase).getExamenes()
+//                        .get(exam_index).getRespuestas().get(p_index)).setBotones(bg_VoF);
+//            
+//            ((ToF) aa.getListaAlumnos().get(in_alumno).getClases().get(jl_indexclase).getExamenes()
+//                        .get(exam_index).getRespuestas().get(p_index)).setBottons(bottons);
+//            aa.escribirArchivo();
+//            
+//            System.out.println(rbe_true.isSelected()+"___ "+rbe_false.isSelected() );
+//            }catch(IndexOutOfBoundsException e){
+//                try{
+//                    (  aa.getListaAlumnos().get(in_alumno).getClases().get(jl_indexclase).getExamenes()
+//                            .get(exam_index).getRespuestas()).add(new ToF(cbq.getValor(), 
+//                                    cbq.getPregunta(), bg_VoF, bottons));
+//                    aa.escribirArchivo();
+//                }catch(Exception ex){
+//                    ex.printStackTrace();
+//                }
+//                    
+//            }
+////            
+////            
+//            aa.cargarArchivo();
+//            System.out.println("hello");
+//            boolean pregunta = ((VoF) cbq).getBottons()[0].isSelected();
+//            boolean respuesta = ((ToF) aa.getListaAlumnos().get(in_alumno).getClases().get(jl_indexclase).getExamenes()
+//                        .get(exam_index).getRespuestas().get(p_index)).getBottons()[0].isSelected();
+//            
+//            System.out.println(respuesta+" - " + pregunta);
+//            
+//            if (pregunta == respuesta) {
+//                JOptionPane.showMessageDialog(jd_examen, "Correcto");
+//            }
+//            else{
+//                JOptionPane.showMessageDialog(jd_examen, "InCorrecto");
+//            }
+        }
+        if (cbq instanceof MultipleChoice) {
+//            ((MultipleChoice)Exa.getRespuestas().get(p_index)).setBotones(bg_Multiple);
+//            JRadioButton [] bottons = {RadioButton1,RadioButton2,RadioButton3,RadioButton4};
+//            ((MultipleChoice)Exa.getRespuestas().get(p_index)).setBottons(bottons);
+            
+            
+        }
+        if (cbq instanceof Enumerate) {
+        }
+    }
+    
+    private void Preguntas(){
+        int cbq_index = p_index;
+        Pregunta cbq = Exa.getPreguntas().get(p_index);
+        int pregunta;
+        pregunta = cbq_index +1 ;
+        jl_p.setText("Pregunta "+pregunta);
+        jl_nomexamen.setText(Exa.getNombre().getText());
+        ta_pyd.setText(cbq.getPregunta().getText());
+        
+        if (cbq instanceof VoF) {
+            bg_VOF.setVisible(true);
+            bg_MULTIPLE.setVisible(false);
+            bg_ENUM.setVisible(false);
+        }
+        if (cbq instanceof MultipleChoice) {
+            bg_VOF.setVisible(false);
+            bg_MULTIPLE.setVisible(true);
+            bg_ENUM.setVisible(false);
+            
+            RadioButton1.setText((((MultipleChoice) cbq).getBottons()[0]).getText());
+            RadioButton2.setText((((MultipleChoice) cbq).getBottons()[1]).getText());
+            RadioButton3.setText((((MultipleChoice) cbq).getBottons()[2]).getText());
+            RadioButton4.setText((((MultipleChoice) cbq).getBottons()[3]).getText());
+        }
+        if (cbq instanceof Enumerate) {
+            bg_VOF.setVisible(false);
+            bg_MULTIPLE.setVisible(false);
+            bg_ENUM.setVisible(true);
+            
+        }
+    }
+    
+    private void ExamenWindow(){
+        jd_examen.pack();//para que la ventana se abra correctamente
+        jd_examen.setLocationRelativeTo(this);
+        jd_examen.setModal(true);//hacer prioridad la ventana
+        jd_examen.setVisible(true);
+    }
     private void asigexamenes(){
         ae.cargarArchivo();
         admAlumno aa = new admAlumno("./alumnos.cbm");
         aa.cargarArchivo();
         for (int i=0; i< aa.getListaAlumnos().get(in_alumno).getClases().size();i++) {
+            if (i==0) {
+                aa.getListaAlumnos().get(in_alumno).getClases().get(i).getExamenes().clear();
+            }
             for (Examen e : ae.getListaExamen()) {
                 String nom = e.getClase().getNombre().getText();//nombre de clase en examen
                 String nom2 = aa.getListaAlumnos().get(in_alumno).getClases().get(i).getNombre().getText();///indice de la clase del alumno
                 if (nom.equals(nom2)) {
+                    aa.getListaAlumnos().get(in_alumno).getClases().get(i).getExamenes().remove(e);
                     aa.getListaAlumnos().get(in_alumno).getClases().get(i).getExamenes().add(e);
                     aa.escribirArchivo();
                     a = aa.getListaAlumnos().get(in_alumno);
@@ -7603,6 +8159,52 @@ public class Inicio extends javax.swing.JFrame {
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "No se pudieron agregar los datos correctamente");
             }
+        }
+    }
+    
+    
+    
+    private void preguntas(){
+        int cbq_index = cb_index;
+        Pregunta cbq = Exa.getPreguntas().get(cb_index);
+//        ae.cargarArchivo();
+//        int index = ae.getListaExamen().size()-1;
+        String s = Exa.getPreguntas().get(cbq_index).getPregunta().getText();///pregunta 
+        double value = Exa.getPreguntas().get(cbq_index).getValor();
+        int pregunta;
+        
+        pregunta = cbq_index +1 ;
+        jl_p.setText("Pregunta "+pregunta);
+        jl_nomexamen.setText(Exa.getNombre().getText());
+//        s_valor.setValue(value);
+//        ta_desq.setText(s);
+        
+        if (cbq instanceof VoF) {
+            bg_VOF.setVisible(true);
+            bg_MULTIPLE.setVisible(false);
+            bg_ENUM.setVisible(false);
+//            rb_true.setSelected((((VoF) cbq).getBottons()[0]).isSelected());
+//            rb_false.setSelected((((VoF) cbq).getBottons()[1]).isSelected());
+            
+        }
+        if (cbq instanceof MultipleChoice) {
+            bg_VOF.setVisible(false);
+            bg_MULTIPLE.setVisible(false);
+            bg_ENUM.setVisible(true);
+            
+            
+            
+            jTextField1.setText((((MultipleChoice) cbq).getBottons()[0]).getText());
+            jTextField2.setText((((MultipleChoice) cbq).getBottons()[1]).getText());
+            jTextField3.setText((((MultipleChoice) cbq).getBottons()[2]).getText());
+            jTextField4.setText((((MultipleChoice) cbq).getBottons()[3]).getText());
+            
+        }
+        if (cbq instanceof Enumerate) {
+            bg_VOF.setVisible(false);
+            bg_MULTIPLE.setVisible(false);
+            bg_ENUM.setVisible(true);
+            
         }
     }
     
@@ -7976,6 +8578,25 @@ public class Inicio extends javax.swing.JFrame {
                 }
                 
             }
+            if (x==6) {
+                admAlumno aa = new admAlumno("./alumnos.cbm");
+                aa.cargarArchivo();
+                ae.cargarArchivo();
+                jt_examen.setModel(new javax.swing.table.DefaultTableModel(
+                        new Object[][]{},
+                        new String[]{
+                            "Nombre","Inicio","Fin","Clase"
+                        }
+                ));
+                for (Examen t : aa.getListaAlumnos().get(in_alumno).getClases().get(jl_indexclase).getExamenes()) {
+                    
+                    Object[] row = {  t.getNombre().getText(),t.getInicio().toString(),t.getFin().toString(),t.getClase().getNombre().getText() };
+                    DefaultTableModel modelo = (DefaultTableModel) jt_examen.getModel();
+                    modelo.addRow(row);
+                    jt_examen.setModel(modelo);
+                }
+                
+            }
             
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -8041,6 +8662,7 @@ public class Inicio extends javax.swing.JFrame {
                     if (valid) {
                         a = u; 
                         in_alumno = con;
+                        
                         asigexamenes();
                     }
                 }
@@ -8145,15 +8767,25 @@ public class Inicio extends javax.swing.JFrame {
     ArrayList<Usuario>users = new ArrayList();
     ArrayList<Clase> clases = new ArrayList();
     ArrayList<Respuesta> res = new ArrayList();
-    Examen E; 
-    int exam_index, cb_index, jl_indexclase, in_alumno;
+    Examen E, Exa; 
+    int exam_index, cb_index, jl_indexclase, in_alumno, aex_index, p_index;
+    
     String loguser = "";
     Maestro m; 
     Alumno a; 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton RadioButton1;
+    private javax.swing.JRadioButton RadioButton2;
+    private javax.swing.JRadioButton RadioButton3;
+    private javax.swing.JRadioButton RadioButton4;
     private javax.swing.JPanel bg;
     private javax.swing.JPanel bg1;
+    private javax.swing.JPanel bg_ENUM;
+    private javax.swing.JPanel bg_MULTIPLE;
+    private javax.swing.ButtonGroup bg_Multiple;
+    private javax.swing.JPanel bg_VOF;
+    private javax.swing.ButtonGroup bg_VoF;
     private javax.swing.JPanel bg_addalumnos;
     private javax.swing.JPanel bg_addclase;
     private javax.swing.JPanel bg_addmaestros;
@@ -8197,6 +8829,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JPanel exbt_registro2;
     private javax.swing.JPanel exbt_registro25;
     private javax.swing.JPanel exbt_registro26;
+    private javax.swing.JPanel exbt_registro27;
     private javax.swing.JPanel exbt_registro3;
     private javax.swing.JPanel exbt_registro4;
     private javax.swing.JPanel exbt_registro5;
@@ -8210,6 +8843,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JPanel header2;
     private javax.swing.JPanel header26;
     private javax.swing.JPanel header27;
+    private javax.swing.JPanel header28;
     private javax.swing.JPanel header3;
     private javax.swing.JPanel header4;
     private javax.swing.JPanel header5;
@@ -8262,6 +8896,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
@@ -8271,6 +8906,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JRadioButton jRadioButton1;
@@ -8285,6 +8921,8 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane12;
+    private javax.swing.JScrollPane jScrollPane13;
+    private javax.swing.JScrollPane jScrollPane14;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -8297,6 +8935,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JToolBar.Separator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
@@ -8325,18 +8964,22 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JButton jb_mod;
     private javax.swing.JButton jb_modexamen1;
     private javax.swing.JButton jb_modi;
+    private javax.swing.JButton jb_next;
     private javax.swing.JButton jb_notas;
     private javax.swing.JButton jb_notasfinales1;
     private javax.swing.JButton jb_p;
     private javax.swing.JButton jb_respexamen;
     private javax.swing.JButton jb_resultados;
     private javax.swing.JButton jb_resultados1;
+    private javax.swing.JButton jb_return;
+    private javax.swing.JButton jb_rlexamen;
     private javax.swing.JButton jb_salir;
     private javax.swing.JButton jb_salirm;
     private javax.swing.JButton jb_tareas;
     private javax.swing.JButton jb_tareasm;
     private javax.swing.JDialog jd_acceso;
     private javax.swing.JDialog jd_addq;
+    private javax.swing.JDialog jd_examen;
     private javax.swing.JDialog jd_modq;
     private javax.swing.JFrame jf_acceso;
     private javax.swing.JFrame jf_agalumno;
@@ -8366,8 +9009,10 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JList<String> jl_clases2;
     private javax.swing.JList<String> jl_class;
     private javax.swing.JLabel jl_maestro;
+    private javax.swing.JLabel jl_nomexamen;
     private javax.swing.JLabel jl_numq;
     private javax.swing.JLabel jl_numq1;
+    private javax.swing.JLabel jl_p;
     private javax.swing.JLabel jl_registro;
     private javax.swing.JLabel jl_regresar;
     private javax.swing.JLabel jl_regresar0;
@@ -8446,6 +9091,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JTextField jt_User1;
     private javax.swing.JTextField jt_carrera;
     private javax.swing.JTextField jt_carrera1;
+    private javax.swing.JTable jt_examen;
     private javax.swing.JTextField jt_name;
     private javax.swing.JTextField jt_name1;
     private javax.swing.JTextField jt_name2;
@@ -8454,6 +9100,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JTextField jt_nombre;
     private javax.swing.JTextField jt_profesion;
     private javax.swing.JTextField jt_profesion1;
+    private javax.swing.JTextField jt_res;
     private javax.swing.JTextField jt_rol;
     private javax.swing.JTextField jt_rol1;
     private javax.swing.JTextField jt_user;
@@ -8465,6 +9112,8 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JRadioButton rb_false1;
     private javax.swing.JRadioButton rb_true;
     private javax.swing.JRadioButton rb_true1;
+    private javax.swing.JRadioButton rbe_false;
+    private javax.swing.JRadioButton rbe_true;
     private javax.swing.JPanel results;
     private javax.swing.JSpinner s_valor;
     private javax.swing.JSpinner s_valor1;
@@ -8512,6 +9161,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JSeparator sep_nombre6;
     private javax.swing.JTextArea ta_desq;
     private javax.swing.JTextArea ta_desq1;
+    private javax.swing.JTextArea ta_pyd;
     private javax.swing.JTextArea ta_res;
     private javax.swing.JTextArea ta_res1;
     private javax.swing.JTable tb_elalumnos;
@@ -8608,6 +9258,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel x2;
     private javax.swing.JLabel x26;
     private javax.swing.JLabel x27;
+    private javax.swing.JLabel x28;
     private javax.swing.JLabel x3;
     private javax.swing.JLabel x4;
     private javax.swing.JLabel x5;

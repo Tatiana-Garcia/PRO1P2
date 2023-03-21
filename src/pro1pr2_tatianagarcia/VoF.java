@@ -13,7 +13,7 @@ import javax.swing.JTextArea;
  *
  * @author tatig
  */
-public class VoF extends Pregunta{
+public class VoF extends Pregunta {
     private ButtonGroup botones = new ButtonGroup(); 
     private JRadioButton v = new JRadioButton();
     private JRadioButton f = new JRadioButton();
