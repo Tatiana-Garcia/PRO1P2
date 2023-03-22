@@ -6106,7 +6106,7 @@ public class Inicio extends javax.swing.JFrame {
         tx_acceso.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         tx_acceso.setText("ACCESO");
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Untitled.png"))); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/iniciar-sesion.png"))); // NOI18N
         jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel9MouseClicked(evt);
@@ -6128,15 +6128,15 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(tx_acceso, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jp_accesoLayout.createSequentialGroup()
                 .addGap(54, 54, 54)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jp_accesoLayout.setVerticalGroup(
             jp_accesoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jp_accesoLayout.createSequentialGroup()
                 .addComponent(tx_acceso, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(54, Short.MAX_VALUE))
         );
 
@@ -6160,7 +6160,7 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/maestro.png"))); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/maestro-ensenando-con-un-palo.png"))); // NOI18N
 
         javax.swing.GroupLayout jp_maestrosLayout = new javax.swing.GroupLayout(jp_maestros);
         jp_maestros.setLayout(jp_maestrosLayout);
@@ -6214,7 +6214,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(tx_alumnos, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_alumnosLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel11)
                 .addGap(62, 62, 62))
         );
         jp_alumnosLayout.setVerticalGroup(
@@ -6246,7 +6246,7 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/asignatura.png"))); // NOI18N
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/asignar.png"))); // NOI18N
 
         javax.swing.GroupLayout jp_clasesLayout = new javax.swing.GroupLayout(jp_clases);
         jp_clases.setLayout(jp_clasesLayout);
@@ -6289,7 +6289,7 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/asignacion.png"))); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/delegacion.png"))); // NOI18N
 
         javax.swing.GroupLayout jp_asinacionLayout = new javax.swing.GroupLayout(jp_asinacion);
         jp_asinacion.setLayout(jp_asinacionLayout);
@@ -6389,7 +6389,7 @@ public class Inicio extends javax.swing.JFrame {
 
         jp_inicio.add(header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1390, -1));
 
-        jl_maestro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/maestro.png"))); // NOI18N
+        jl_maestro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/maestro-ensenando-con-un-palo.png"))); // NOI18N
         jp_inicio.add(jl_maestro, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 310, -1, 130));
 
         jl_alumno.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -6421,7 +6421,7 @@ public class Inicio extends javax.swing.JFrame {
         jl_registro.setBackground(new java.awt.Color(204, 204, 204));
         jl_registro.setForeground(new java.awt.Color(153, 153, 153));
         jl_registro.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jl_registro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/registro.png"))); // NOI18N
+        jl_registro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/cuenta.png"))); // NOI18N
         jl_registro.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jl_registroMouseClicked(evt);
@@ -10016,26 +10016,19 @@ public class Inicio extends javax.swing.JFrame {
                 int tam = aa.getListaAlumnos().get(in_alumno).getClases().get(jl_indexclase)
                         .getExamenes().size();
                 int tam2 = aa.getListaAlumnos().get(in_alumno).getClases().get(jl_indexclase).getTareas().size();
-                String []str = new String[tam+2+tam2+1];
-                for (int i =0; i< tam+2+tam2+1; i++) {
+                String []str = new String[tam+2+1];
+                for (int i =0; i< tam+2+1; i++) {
                     if (i==0) {
                         str[i]="Cuenta";
                     }else if(i==1){
                         str[i]="Alumno";
-                    }else if(i==tam+2+tam2){
+                    }else if(i==tam+2){
                         str[i]= "Nota final";
-                    }else if(i<2+tam){
+                    }else{
                         str[i] = aa.getListaAlumnos().get(in_alumno).getClases().get(jl_indexclase)
                             .getExamenes().get(i-2).getNombre().getText();
                         System.out.println(aa.getListaAlumnos().get(in_alumno).getClases().get(jl_indexclase)
                             .getExamenes().get(i-2).getPuntuacion());
-                        System.out.println();
-                    }
-                    else{
-                        str[i] = aa.getListaAlumnos().get(in_alumno).getClases().get(jl_indexclase)
-                            .getTareas().get(i-2-tam).getNombre().getText();
-                        System.out.println(aa.getListaAlumnos().get(in_alumno).getClases().get(jl_indexclase)
-                            .getTareas().get(i-2-tam).getPuntuacion());
                         System.out.println();
                     }
                 }
@@ -10047,22 +10040,18 @@ public class Inicio extends javax.swing.JFrame {
                 ));
                 int tam3 = aa.getListaAlumnos().get(in_alumno).getClases().get(jl_indexclase).getExamenes().size();
                 int tam4 =aa.getListaAlumnos().get(in_alumno).getClases().get(jl_indexclase).getTareas().size();;
-                Object[] row = new Object[tam3+2+tam4+1];
+                Object[] row = new Object[tam3+2+1];
                 
-                for (int i = 0; i < tam3+2+1+tam4; i++) {
+                for (int i = 0; i < tam3+2+1; i++) {
                     if (i==0) {
                         row[i]=aa.getListaAlumnos().get(in_alumno).getCuenta().getText();
                     }else if(i==1){
                         row[i]=aa.getListaAlumnos().get(in_alumno).getNombre().getText();
-                    }else if(i==tam3+2+tam4){
+                    }else if(i==tam3+2){
                         row[i]=sumatoria;
-                    }else if(i<2+tam3){
+                    }else {
                         row[i] = aa.getListaAlumnos().get(in_alumno).getClases().get(jl_indexclase).getExamenes().get(i-2).getPuntuacion();
                         sumatoria += aa.getListaAlumnos().get(in_alumno).getClases().get(jl_indexclase).getExamenes().get(i-2).getPuntuacion();
-                    }
-                    else{
-                        row[i] = aa.getListaAlumnos().get(in_alumno).getClases().get(jl_indexclase).getTareas().get(i-2-tam3).getPuntuacion();
-                        sumatoria += aa.getListaAlumnos().get(in_alumno).getClases().get(jl_indexclase).getTareas().get(i-2-tam3).getPuntuacion();
                     }
                 }
                 DefaultTableModel modelo = (DefaultTableModel) tb_notasalumnos.getModel();
@@ -10095,26 +10084,19 @@ public class Inicio extends javax.swing.JFrame {
                             .getExamenes().size();
                     int tam2 = alumni.getClases().get(jl_indexclase)
                             .getTareas().size();
-                    String []str = new String[tam+2+tam2+1];
-                    for (int i =0; i< tam+2+tam2+1; i++) {
+                    String []str = new String[tam+2+1];
+                    for (int i =0; i< tam+2+1; i++) {
                         if (i==0) {
                             str[i]="Cuenta";
                         }else if(i==1){
                             str[i]="Alumno";
-                        }else if(i==tam+2+tam2){
+                        }else if(i==tam+2){
                             str[i]= "Nota final";
                         }else if(i<tam+2){
                             str[i] = alumni.getClases().get(jl_indexclase)
                                 .getExamenes().get(i-2).getNombre().getText();
                             System.out.println(alumni.getClases().get(jl_indexclase)
                                 .getExamenes().get(i-2).getPuntuacion());
-                            System.out.println();
-                        }
-                        else{
-                            str[i] = alumni.getClases().get(jl_indexclase)
-                                .getTareas().get(i-2-tam).getNombre().getText();
-                            System.out.println(alumni.getClases().get(jl_indexclase)
-                                .getTareas().get(i-2-tam).getPuntuacion());
                             System.out.println();
                         }
                     }
@@ -10127,22 +10109,18 @@ public class Inicio extends javax.swing.JFrame {
                     int tam3 = alumni.getClases().get(jl_indexclase).getExamenes().size();
                     int tam4 = alumni.getClases().get(jl_indexclase)
                             .getTareas().size();
-                    Object[] row = new Object[tam3+2+tam4+1];
+                    Object[] row = new Object[tam3+2+1];
 
-                    for (int i = 0; i < tam3+2+tam4+1; i++) {
+                    for (int i = 0; i < tam3+2+1; i++) {
                         if (i==0) {
                             row[i]=alumni.getCuenta().getText();
                         }else if(i==1){
                             row[i]=alumni.getNombre().getText();
-                        }else if(i==tam3+2+tam4){
+                        }else if(i==tam3+2){
                             row[i]=sumatoria;
-                        }else if(i<2+tam3){
+                        }else {
                             row[i] = alumni.getClases().get(jl_indexclase).getExamenes().get(i-2).getPuntuacion();
                             sumatoria += alumni.getClases().get(jl_indexclase).getExamenes().get(i-2).getPuntuacion();
-                        }
-                        else{
-                            row[i] = alumni.getClases().get(jl_indexclase).getTareas().get(i-2-tam3).getPuntuacion();
-                            sumatoria += alumni.getClases().get(jl_indexclase).getTareas().get(i-2-tam3).getPuntuacion();
                         }
                     }
                     DefaultTableModel modelo = (DefaultTableModel) jt_notas.getModel();

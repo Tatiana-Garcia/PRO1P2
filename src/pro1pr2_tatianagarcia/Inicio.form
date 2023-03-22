@@ -10551,7 +10551,7 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                      <Component id="jLabel9" min="-2" pref="118" max="-2" attributes="0"/>
+                      <Component id="jLabel9" min="-2" pref="140" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -10560,8 +10560,8 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="tx_acceso" min="-2" pref="50" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel9" min="-2" pref="140" max="-2" attributes="0"/>
                       <EmptySpace pref="54" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -10583,7 +10583,7 @@
             <Component class="javax.swing.JLabel" name="jLabel9">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Images/Untitled.png"/>
+                  <Image iconType="3" name="/Images/iniciar-sesion.png"/>
                 </Property>
               </Properties>
               <Events>
@@ -10652,7 +10652,7 @@
             <Component class="javax.swing.JLabel" name="jLabel10">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Images/maestro.png"/>
+                  <Image iconType="3" name="/Images/maestro-ensenando-con-un-palo.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -10679,7 +10679,7 @@
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jLabel11" min="-2" pref="93" max="-2" attributes="0"/>
+                      <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -10781,7 +10781,7 @@
             <Component class="javax.swing.JLabel" name="jLabel12">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Images/asignatura.png"/>
+                  <Image iconType="3" name="/Images/asignar.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -10845,7 +10845,7 @@
             <Component class="javax.swing.JLabel" name="jLabel13">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Images/asignacion.png"/>
+                  <Image iconType="3" name="/Images/delegacion.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -10974,7 +10974,7 @@
         <Component class="javax.swing.JLabel" name="jl_maestro">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Images/maestro.png"/>
+              <Image iconType="3" name="/Images/maestro-ensenando-con-un-palo.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -11083,7 +11083,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Images/registro.png"/>
+                  <Image iconType="3" name="/Images/cuenta.png"/>
                 </Property>
               </Properties>
               <Events>
