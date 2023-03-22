@@ -10079,53 +10079,63 @@ public class Inicio extends javax.swing.JFrame {
                 admAlumno aa = new admAlumno("./alumnos.cbm");
                 aa.cargarArchivo();
                 int sumatoria = 0;
+                int tam = aa.getListaAlumnos()
+                        .get(4)
+                        .getClases()
+                        .get(0)
+                        .getExamenes()
+                        .size();
+                int tam2 = aa.getListaAlumnos().get(4).getClases().get(0).getTareas().size();
+                String []str = new String[tam+2+1];
+                for (int i =0; i< tam+2+1; i++) {
+                    if (i==0) {
+                        str[i]="Cuenta";
+                    }else if(i==1){
+                        str[i]="Alumno";
+                    }else if(i==tam+2){
+                        str[i]= "Nota final";
+                    }else{
+                        str[i] = aa.getListaAlumnos().get(4).getClases().get(jl_indexclase)
+                            .getExamenes().get(i-2).getNombre().getText();
+                        System.out.println(aa.getListaAlumnos().get(4).getClases().get(jl_indexclase)
+                            .getExamenes().get(i-2).getPuntuacion());
+                        System.out.println();
+                    }
+                }
+
+
+                jt_notas.setModel(new javax.swing.table.DefaultTableModel(
+                        new Object[][]{},
+                        str
+                ));
+                
+                
                 for (Alumno alumni : aa.getListaAlumnos()) {
-                    int tam = alumni.getClases().get(jl_indexclase)
-                            .getExamenes().size();
-                    int tam2 = alumni.getClases().get(jl_indexclase)
-                            .getTareas().size();
-                    String []str = new String[tam+2+1];
-                    for (int i =0; i< tam+2+1; i++) {
-                        if (i==0) {
-                            str[i]="Cuenta";
-                        }else if(i==1){
-                            str[i]="Alumno";
-                        }else if(i==tam+2){
-                            str[i]= "Nota final";
-                        }else if(i<tam+2){
-                            str[i] = alumni.getClases().get(jl_indexclase)
-                                .getExamenes().get(i-2).getNombre().getText();
-                            System.out.println(alumni.getClases().get(jl_indexclase)
-                                .getExamenes().get(i-2).getPuntuacion());
-                            System.out.println();
+                    String cade = alumni.getClases().get(0).getNombre().getText();
+                    String cade2 = m.getClases().get(jl_indexclase).getNombre().getText();
+                    if (cade.equals(cade2)) {
+                        int tam3 = alumni.getClases().get(0).getExamenes().size();
+                        int tam4 = alumni.getClases().get(0)
+                                .getTareas().size();
+                        Object[] row = new Object[tam3+2+1];
+
+                        for (int i = 0; i < tam3+2+1; i++) {
+                            if (i==0) {
+                                row[i]=alumni.getCuenta().getText();
+                            }else if(i==1){
+                                row[i]=alumni.getNombre().getText();
+                            }else if(i==tam3+2){
+                                row[i]=sumatoria;
+                            }else {
+                                row[i] = alumni.getClases().get(0).getExamenes().get(i-2).getPuntuacion();
+                                sumatoria += alumni.getClases().get(0).getExamenes().get(i-2).getPuntuacion();
+                            }
                         }
+                        DefaultTableModel modelo = (DefaultTableModel) jt_notas.getModel();
+                            modelo.addRow(row);
+                            jt_notas.setModel(modelo);
                     }
-
-
-                    jt_notas.setModel(new javax.swing.table.DefaultTableModel(
-                            new Object[][]{},
-                            str
-                    ));
-                    int tam3 = alumni.getClases().get(jl_indexclase).getExamenes().size();
-                    int tam4 = alumni.getClases().get(jl_indexclase)
-                            .getTareas().size();
-                    Object[] row = new Object[tam3+2+1];
-
-                    for (int i = 0; i < tam3+2+1; i++) {
-                        if (i==0) {
-                            row[i]=alumni.getCuenta().getText();
-                        }else if(i==1){
-                            row[i]=alumni.getNombre().getText();
-                        }else if(i==tam3+2){
-                            row[i]=sumatoria;
-                        }else {
-                            row[i] = alumni.getClases().get(jl_indexclase).getExamenes().get(i-2).getPuntuacion();
-                            sumatoria += alumni.getClases().get(jl_indexclase).getExamenes().get(i-2).getPuntuacion();
-                        }
-                    }
-                    DefaultTableModel modelo = (DefaultTableModel) jt_notas.getModel();
-                        modelo.addRow(row);
-                        jt_notas.setModel(modelo);
+                    
                 }
 
                     
