@@ -17,6 +17,7 @@ public class Examen implements Serializable{
     private Clase clase; 
     private double puntuacion;
     private boolean valid;
+    private boolean disponible;
     
     public Examen() {
     }
@@ -101,6 +102,15 @@ public class Examen implements Serializable{
     public void setRespuestas(ArrayList<Answers> respuestas) {
         this.respuestas = respuestas;
     }
+
+    public boolean isDisponible() {
+        return disponible;
+    }
+
+    public void setDisponible(boolean disponible) {
+        this.disponible = disponible;
+    }
+    
     
     @Override
     public String toString() {

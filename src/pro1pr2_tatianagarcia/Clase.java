@@ -17,6 +17,7 @@ public class Clase implements Serializable{
     private JFormattedTextField periodo;
     private int year;
     private ArrayList<Examen> examenes = new ArrayList();
+    private ArrayList<Tarea> tareas = new ArrayList();
 
     public Clase() {
     }
@@ -93,6 +94,15 @@ public class Clase implements Serializable{
     public void setExamenes(ArrayList<Examen> examenes) {
         this.examenes = examenes;
     }
+
+    public ArrayList<Tarea> getTareas() {
+        return tareas;
+    }
+
+    public void setTareas(ArrayList<Tarea> tareas) {
+        this.tareas = tareas;
+    }
+    
     
     @Override
     public String toString() {
