@@ -595,6 +595,7 @@ public class Inicio extends javax.swing.JFrame {
         jSeparator6 = new javax.swing.JSeparator();
         jb_next1 = new javax.swing.JButton();
         jb_return1 = new javax.swing.JButton();
+        icon = new javax.swing.JLabel();
         g_vof = new javax.swing.ButtonGroup();
         g_multiple = new javax.swing.ButtonGroup();
         jp_registro = new javax.swing.JPanel();
@@ -4727,7 +4728,6 @@ public class Inicio extends javax.swing.JFrame {
 
         jf_alumwindow.setLocationByPlatform(true);
         jf_alumwindow.setUndecorated(true);
-        jf_alumwindow.setPreferredSize(new java.awt.Dimension(1280, 820));
         jf_alumwindow.setResizable(false);
         jf_alumwindow.setSize(new java.awt.Dimension(1280, 820));
 
@@ -5803,7 +5803,7 @@ public class Inicio extends javax.swing.JFrame {
         jl_p1.setForeground(new java.awt.Color(204, 204, 204));
         jl_p1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jl_p1.setText("Pregunta");
-        jPanel20.add(jl_p1, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 107, 129, 44));
+        jPanel20.add(jl_p1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 129, 44));
 
         ta_pyd1.setBackground(new java.awt.Color(0, 0, 0));
         ta_pyd1.setColumns(20);
@@ -5965,6 +5965,7 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
         jPanel20.add(jb_return1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
+        jPanel20.add(icon, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 30, 30));
 
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
         jPanel19.setLayout(jPanel19Layout);
@@ -9312,6 +9313,12 @@ public class Inicio extends javax.swing.JFrame {
         jl_p1.setText("Pregunta "+pregunta);
         jl_nomexamen1.setText(Exa.getNombre().getText());
         ta_pyd1.setText(cbq.getPregunta().getText());
+        if (cbq.isCorrect()) {
+            icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/correcto.png")));
+        }else{
+            icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/x.png")));
+        }
+        
         
         if (cbq instanceof ToF) {
             bg_VOF1.setVisible(true);
@@ -10525,6 +10532,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JPanel header7;
     private javax.swing.JPanel header8;
     private javax.swing.JPanel header9;
+    private javax.swing.JLabel icon;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jL_login;
